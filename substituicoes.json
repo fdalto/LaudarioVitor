@@ -1,18 +1,308 @@
 [
-    { "numero": 1, "codigo": "1a", "resumo": "Osteofitose Marginal", "frase": "Discreta osteofitose marginal no fêmur, tíbia e patela." },
-    { "numero": 1, "codigo": "1b", "resumo": "Osteoartrose", "frase": "Sinais de osteoartrose, caracterizada por irregularidades condrais, redução do espaço articular e reações osteofitárias marginais, mais evidentes no compartimento femorotibial medial lateral." },
-    { "numero": 2, "codigo": "2a", "resumo": "Pequeno Derrame", "frase": "Pequena quantidade de líquido intra-articular." },
-    { "numero": 2, "codigo": "2b", "resumo": "Derrame Moderado", "frase": "Moderada quantidade de líquido intra-articular." },
-    { "numero": 3, "codigo": "3a", "resumo": "Cisto de Baker", "frase": "Presença de líquido na bursa gastrocnêmio semimembranoso (cisto de Baker)." },
-    { "numero": 3, "codigo": "3b", "resumo": "Filme Líquido na Fossa Poplítea", "frase": "Presença de pequeno filme líquido na bursa gastrocnêmio semimembranoso." },
-    { "numero": 4, "codigo": "4a", "resumo": "Menisco Normal", "frase": "Menisco medial lateral de morfologia, contornos e intensidade de sinal habituais." },
-    { "numero": 4, "codigo": "4b", "resumo": "Alterações Degenerativas", "frase": "Menisco medial lateral de morfologia e contornos conservados, apresentando pequenos focos de hipersinal no seu interior, sem extensão para as superfícies articulares, compatíveis com alterações degenerativas intrassubstanciais." },
-    { "numero": 4, "codigo": "4c", "resumo": "Fissura no Menisco", "frase": "Traço de hipersinal no corno posterior anterior do menisco medial lateral estendendo-se para a superfície articular superior inferior sugestiva de fissura." },
-    { "numero": 4, "codigo": "4d", "resumo": "Ruptura em Alça de Balde", "frase": "Ruptura longitudinal do menisco medial lateral com fragmento deslocado de aspecto em ¨alça de balde¨, notando-se desvio do fragmento para a região intercondileana." },
-    { "numero": 4, "codigo": "4e", "resumo": "Ruptura Radial", "frase": "Ruptura radial acometendo o corpo corno posterior anterior do menisco medial lateral." },
-    { "numero": 4, "codigo": "4f", "resumo": "Ruptura Complexa com Extrusão", "frase": "Ruptura complexa do menisco medial lateral acometendo o corno posterior anterior e corpo com extrusão meniscal." },
-    { "numero": 4, "codigo": "4g", "resumo": "Ruptura com Redução de Volume", "frase": "Ruptura complexa do menisco medial lateral acometendo o corno posterior anterior e corpo com acentuada redução de volume." },
-    { "numero": 4, "codigo": "4h", "resumo": "Alterações Pós-operatórias", "frase": "Redução de volume do corno posterior anterior e corpo do menisco medial lateral sugestiva de alterações pós-operatórias." },
-    { "numero": 99, "codigo": "99a", "resumo": "Achado Cicatricial", "frase": "Presença de tecido cicatricial junto ao ligamento patelofemoral medial." }
-  ]
-  
+  {
+    "numero": 1,
+    "codigo": "1a",
+    "resumo": "Osteofitose Marginal",
+    "frase": "Discreta osteofitose marginal no fêmur, tíbia e patela."
+  },
+  {
+    "numero": 1,
+    "codigo": "1b",
+    "resumo": "Osteoartrose",
+    "frase": "Sinais de osteoartrose, caracterizada por irregularidades condrais, redução do espaço articular e reações osteofitárias marginais, mais evidentes no compartimento femorotibial medial lateral."
+  },
+  {
+    "numero": 2,
+    "codigo": "2a",
+    "resumo": "Pequeno Derrame",
+    "frase": "Pequena quantidade de líquido intra-articular."
+  },
+  {
+    "numero": 2,
+    "codigo": "2b",
+    "resumo": "Derrame Moderado",
+    "frase": "Moderada quantidade de líquido intra-articular."
+  },
+  {
+    "numero": 3,
+    "codigo": "3a",
+    "resumo": "Cisto de Baker",
+    "frase": "Presença de líquido na bursa gastrocnêmio semimembranoso (cisto de Baker)."
+  },
+  {
+    "numero": 3,
+    "codigo": "3b",
+    "resumo": "Filme Líquido na Fossa Poplítea",
+    "frase": "Presença de pequeno filme líquido na bursa gastrocnêmio semimembranoso."
+  },
+  {
+    "numero": 4,
+    "codigo": "4a",
+    "resumo": "Menisco Normal",
+    "frase": "Menisco medial lateral de morfologia, contornos e intensidade de sinal habituais."
+  },
+  {
+    "numero": 4,
+    "codigo": "4b",
+    "resumo": "Alterações Degenerativas",
+    "frase": "Menisco medial lateral de morfologia e contornos conservados, apresentando pequenos focos de hipersinal no seu interior, sem extensão para as superfícies articulares, compatíveis com alterações degenerativas intrassubstanciais."
+  },
+  {
+    "numero": 4,
+    "codigo": "4c",
+    "resumo": "Fissura no Menisco",
+    "frase": "Traço de hipersinal no corno posterior anterior do menisco medial lateral estendendo-se para a superfície articular superior inferior sugestiva de fissura."
+  },
+  {
+    "numero": 4,
+    "codigo": "4d",
+    "resumo": "Ruptura em Alça de Balde",
+    "frase": "Ruptura longitudinal do menisco medial lateral com fragmento deslocado de aspecto em ¨alça de balde¨, notando-se desvio do fragmento para a região intercondileana."
+  },
+  {
+    "numero": 4,
+    "codigo": "4e",
+    "resumo": "Ruptura Radial",
+    "frase": "Ruptura radial acometendo o corpo corno posterior anterior do menisco medial lateral."
+  },
+  {
+    "numero": 4,
+    "codigo": "4f",
+    "resumo": "Ruptura Complexa com Extrusão",
+    "frase": "Ruptura complexa do menisco medial lateral acometendo o corno posterior anterior e corpo com extrusão meniscal."
+  },
+  {
+    "numero": 4,
+    "codigo": "4g",
+    "resumo": "Ruptura com Redução de Volume",
+    "frase": "Ruptura complexa do menisco medial lateral acometendo o corno posterior anterior e corpo com acentuada redução de volume."
+  },
+  {
+    "numero": 4,
+    "codigo": "4h",
+    "resumo": "Alterações Pós-operatórias",
+    "frase": "Redução de volume do corno posterior anterior e corpo do menisco medial lateral sugestiva de alterações pós-operatórias."
+  },
+  {
+    "numero": 5,
+    "codigo": "5a",
+    "resumo": "Ruptura Total LCA",
+    "frase": "Ligamento cruzado anterior apresentando descontinuidade de suas fibras compatível com ruptura total."
+  },
+  {
+    "numero": 5,
+    "codigo": "5b",
+    "resumo": "Ruptura Parcial LCA",
+    "frase": "Ligamento cruzado anterior com alteração de sinal, mantendo a orientação das suas fibras, podendo corresponder a ruptura parcial do mesmo."
+  },
+  {
+    "numero": 5,
+    "codigo": "5c",
+    "resumo": "Contusão Femorotibial",
+    "frase": "Alteração de sinal com padrão de edema na região femorotibial lateral compatível com contusões."
+  },
+  {
+    "numero": 5,
+    "codigo": "5d",
+    "resumo": "Translação Anterior da Tíbia",
+    "frase": "Translação anterior da tíbia de cerca de XXX mm (VN até 5-7mm no côndilo femoral lateral)."
+  },
+  {
+    "numero": 5,
+    "codigo": "5e",
+    "resumo": "Degeneração Mucinóide",
+    "frase": "Alteração da intensidade de sinal e aumento da espessura do ligamento cruzado anterior, sem sinais de descontinuidade de suas fibras podendo corresponder degeneração mucinóide."
+  },
+  {
+    "numero": 6,
+    "codigo": "6a",
+    "resumo": "LCP + LCM Normais",
+    "frase": "Ligamentos cruzado posterior e colateral medial de espessura e intensidade de sinal habituais."
+  },
+  {
+    "numero": 6,
+    "codigo": "6b",
+    "resumo": "LCP + LCL Normais",
+    "frase": "Ligamentos cruzado posterior e colateral lateral de espessura e intensidade de sinal habituais."
+  },
+  {
+    "numero": 6,
+    "codigo": "6c",
+    "resumo": "Lesão Crônica LCM",
+    "frase": "Espessamento do ligamento colateral medial sem evidencias de alteração de sinal (sem edema) nas suas fibras, sugerindo lesão antiga/crônica."
+  },
+  {
+    "numero": 6,
+    "codigo": "6d",
+    "resumo": "Estiramento LCM",
+    "frase": "Ligamento colateral medial apresenta alteração de sinal das suas fibras e ao redor, sugerindo estiramento (lesão grau I)."
+  },
+  {
+    "numero": 6,
+    "codigo": "6e",
+    "resumo": "Ruptura Parcial LCM",
+    "frase": "Ligamento colateral medial apresenta-se espessado, de contornos mal definidos e com alteração de sinal de suas fibras, compatível com ruptura parcial."
+  },
+  {
+    "numero": 6,
+    "codigo": "6f",
+    "resumo": "Ruptura Total LCM",
+    "frase": "Ligamento colateral medial apresenta alteração de sinal de suas fibras e ao redor, notando-se descontinuidade das suas fibras no seu terço proximal médio distal sugestivo de ruptura total."
+  },
+  {
+    "numero": 7,
+    "codigo": "7a",
+    "resumo": "Ruptura Total LCP",
+    "frase": "Ligamento cruzado posterior apresentando descontinuidade de suas fibras compatível com ruptura total."
+  },
+  {
+    "numero": 8,
+    "codigo": "8a",
+    "resumo": "Tendinopatia Poplítea",
+    "frase": "Tendão poplíteo apresentando alteração de sinal e espessamento associado a distensão líquida da sua bainha tendínea, compatível com tendinopatia."
+  },
+  {
+    "numero": 9,
+    "codigo": "9a",
+    "resumo": "Tendinopatia Pata de Ganso",
+    "frase": "Alteração da intensidade de sinal com padrão de edema junto das fibras dos tendões da pata de ganso."
+  },
+  {
+    "numero": 9,
+    "codigo": "9b",
+    "resumo": "Bursite Anserina",
+    "frase": "Distensão líquida da bursa dos tendões da pata anserina."
+  },
+  {
+    "numero": 10,
+    "codigo": "10a",
+    "resumo": "Bursite Infrapatelar",
+    "frase": "Alteração de sinal de partes moles na região anterior ao tendão patelar (bursite infrapatelar superficial)."
+  },
+  {
+    "numero": 11,
+    "codigo": "11a",
+    "resumo": "Entesófito Quadríceps",
+    "frase": "Tendões do quadríceps e patelar de aspecto normal, notando-se entesófito na inserção do tendão do quadríceps."
+  },
+  {
+    "numero": 11,
+    "codigo": "11b",
+    "resumo": "Tendinopatia do Quadríceps",
+    "frase": "O tendão do quadríceps apresenta aumento da espessura e com alteração de sinal, compatível com tendinopatia, sem sinais de ruptura."
+  },
+  {
+    "numero": 11,
+    "codigo": "11c",
+    "resumo": "Tendinopatia Patelar",
+    "frase": "O tendão patelar apresenta aumento da espessura e com alteração de sinal, compatível com tendinopatia, sem sinais de ruptura."
+  },
+  {
+    "numero": 12,
+    "codigo": "12a",
+    "resumo": "Hoffite",
+    "frase": "Focos de alto sinal (edema) na gordura de Hoffa junto do polo inferior da patela, podendo estar relacionado a impacto extensor."
+  },
+  {
+    "numero": 13,
+    "codigo": "13a",
+    "resumo": "Condropatia Patelar Leve",
+    "frase": "Cartilagem femoropatelar apresentando heterogeneidade do sinal, sem erosões."
+  },
+  {
+    "numero": 13,
+    "codigo": "13b",
+    "resumo": "Condropatia Patelar Moderada",
+    "frase": "Cartilagem femoropatelar apresentando erosões acometendo menos de 50% da sua espessura."
+  },
+  {
+    "numero": 13,
+    "codigo": "13c",
+    "resumo": "Condropatia Patelar Acentuada",
+    "frase": "Cartilagem femoropatelar apresentando erosões acometendo mais de 50% da sua espessura."
+  },
+  {
+    "numero": 13,
+    "codigo": "13d",
+    "resumo": "Condropatia Patelar Profunda",
+    "frase": "Cartilagem femoropatelar apresentando erosão profunda na cartilagem patelar troclear, com exposição da cortical óssea. A lesão se estende por cerca de XXX cm."
+  },
+  {
+    "numero": 14,
+    "codigo": "14a",
+    "resumo": "Condropatia Femorotibial Medial Leve",
+    "frase": "Cartilagem femorotibial medial com heterogeneidade do sinal, sem erosões."
+  },
+  {
+    "numero": 14,
+    "codigo": "14b",
+    "resumo": "Condropatia Femorotibial Medial Moderada",
+    "frase": "Cartilagem femorotibial medial com erosões acometendo menos de 50% da sua espessura."
+  },
+  {
+    "numero": 14,
+    "codigo": "14c",
+    "resumo": "Condropatia Femorotibial Medial Acentuada",
+    "frase": "Cartilagem femorotibial medial com erosões acometendo mais de 50% da sua espessura."
+  },
+  {
+    "numero": 14,
+    "codigo": "14d",
+    "resumo": "Condropatia Femorotibial Medial Profunda",
+    "frase": "Cartilagem femorotibial medial com erosão profunda na zona de carga do côndilo femoral, com exposição da cortical óssea. A lesão se estende por cerca de XXX cm."
+  },
+  {
+    "numero": 15,
+    "codigo": "15a",
+    "resumo": "Condropatia Femorotibial Lateral Leve",
+    "frase": "Cartilagem femorotibial lateral com heterogeneidade do sinal, sem erosões."
+  },
+  {
+    "numero": 15,
+    "codigo": "15b",
+    "resumo": "Condropatia Femorotibial Lateral Moderada",
+    "frase": "Cartilagem femorotibial lateral com erosões acometendo menos de 50% da sua espessura."
+  },
+  {
+    "numero": 15,
+    "codigo": "15c",
+    "resumo": "Condropatia Femorotibial Lateral Acentuada",
+    "frase": "Cartilagem femorotibial lateral com erosões acometendo mais de 50% da sua espessura."
+  },
+  {
+    "numero": 15,
+    "codigo": "15d",
+    "resumo": "Condropatia Femorotibial Lateral Profunda",
+    "frase": "Cartilagem femorotibial lateral com erosão profunda na zona de carga do côndilo femoral, com exposição da cortical óssea. A lesão se estende por cerca de XXX cm."
+  },
+  {
+    "numero": 16,
+    "codigo": "16a",
+    "resumo": "Patela Alta",
+    "frase": "Patela alta à extensão (índice de Insall-Salvati > 1,5)."
+  },
+  {
+    "numero": 16,
+    "codigo": "16b",
+    "resumo": "Inclinação Lateral Patelar",
+    "frase": "Inclinação lateral patelar a extensão (ângulo de inclinação >20º)."
+  },
+  {
+    "numero": 16,
+    "codigo": "16c",
+    "resumo": "Displasia Troclear",
+    "frase": "Aumento do ângulo do sulco da tróclea (ângulo do sulco >145º). Redução da profundidade troclear (<3mm)."
+  },
+  {
+    "numero": 17,
+    "codigo": "17a",
+    "resumo": "Varizes na Coxa/Perna",
+    "frase": "Presença de dilatações varicosas de veias superficiais da face medial da coxa / perna (varizes)."
+  },
+  {
+    "numero": 99,
+    "codigo": "99a",
+    "resumo": "Achado Cicatricial",
+    "frase": "Presença de tecido cicatricial junto ao ligamento patelofemoral medial."
+  }
+]
