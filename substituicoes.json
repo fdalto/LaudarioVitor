@@ -1,0 +1,18 @@
+[
+    { "numero": 1, "codigo": "1a", "resumo": "Osteofitose Marginal", "frase": "Discreta osteofitose marginal no fêmur, tíbia e patela." },
+    { "numero": 1, "codigo": "1b", "resumo": "Osteoartrose", "frase": "Sinais de osteoartrose, caracterizada por irregularidades condrais, redução do espaço articular e reações osteofitárias marginais, mais evidentes no compartimento femorotibial medial lateral." },
+    { "numero": 2, "codigo": "2a", "resumo": "Pequeno Derrame", "frase": "Pequena quantidade de líquido intra-articular." },
+    { "numero": 2, "codigo": "2b", "resumo": "Derrame Moderado", "frase": "Moderada quantidade de líquido intra-articular." },
+    { "numero": 3, "codigo": "3a", "resumo": "Cisto de Baker", "frase": "Presença de líquido na bursa gastrocnêmio semimembranoso (cisto de Baker)." },
+    { "numero": 3, "codigo": "3b", "resumo": "Filme Líquido na Fossa Poplítea", "frase": "Presença de pequeno filme líquido na bursa gastrocnêmio semimembranoso." },
+    { "numero": 4, "codigo": "4a", "resumo": "Menisco Normal", "frase": "Menisco medial lateral de morfologia, contornos e intensidade de sinal habituais." },
+    { "numero": 4, "codigo": "4b", "resumo": "Alterações Degenerativas", "frase": "Menisco medial lateral de morfologia e contornos conservados, apresentando pequenos focos de hipersinal no seu interior, sem extensão para as superfícies articulares, compatíveis com alterações degenerativas intrassubstanciais." },
+    { "numero": 4, "codigo": "4c", "resumo": "Fissura no Menisco", "frase": "Traço de hipersinal no corno posterior anterior do menisco medial lateral estendendo-se para a superfície articular superior inferior sugestiva de fissura." },
+    { "numero": 4, "codigo": "4d", "resumo": "Ruptura em Alça de Balde", "frase": "Ruptura longitudinal do menisco medial lateral com fragmento deslocado de aspecto em ¨alça de balde¨, notando-se desvio do fragmento para a região intercondileana." },
+    { "numero": 4, "codigo": "4e", "resumo": "Ruptura Radial", "frase": "Ruptura radial acometendo o corpo corno posterior anterior do menisco medial lateral." },
+    { "numero": 4, "codigo": "4f", "resumo": "Ruptura Complexa com Extrusão", "frase": "Ruptura complexa do menisco medial lateral acometendo o corno posterior anterior e corpo com extrusão meniscal." },
+    { "numero": 4, "codigo": "4g", "resumo": "Ruptura com Redução de Volume", "frase": "Ruptura complexa do menisco medial lateral acometendo o corno posterior anterior e corpo com acentuada redução de volume." },
+    { "numero": 4, "codigo": "4h", "resumo": "Alterações Pós-operatórias", "frase": "Redução de volume do corno posterior anterior e corpo do menisco medial lateral sugestiva de alterações pós-operatórias." },
+    { "numero": 99, "codigo": "99a", "resumo": "Achado Cicatricial", "frase": "Presença de tecido cicatricial junto ao ligamento patelofemoral medial." }
+  ]
+  
