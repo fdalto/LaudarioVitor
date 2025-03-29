@@ -61,13 +61,12 @@
       return fetch(url).then(response => response.json());
     }
 
-    // Função que cria o bloco para cada número com os dados originais e suas substituições
+    // Cria o bloco para cada número com os dados originais e suas substituições
     function createBlock(numero, dataOriginal, substituicoesGroup) {
-      // Container do bloco
       var blockDiv = document.createElement('div');
       blockDiv.className = 'block';
       
-      // Cabeçalho: número e campo editável para o rótulo
+      // Cabeçalho: número (não editável) e rótulo (editável)
       var headerDiv = document.createElement('div');
       var numberSpan = document.createElement('span');
       numberSpan.className = 'number';
@@ -76,16 +75,14 @@
       
       var rotuloDiv = document.createElement('span');
       rotuloDiv.className = 'rotulo';
-      // Campo de texto editável para o rótulo
       var rotuloInput = document.createElement('input');
       rotuloInput.type = 'text';
       rotuloInput.value = dataOriginal.rotulo || '';
       rotuloDiv.appendChild(rotuloInput);
       headerDiv.appendChild(rotuloDiv);
-      
       blockDiv.appendChild(headerDiv);
       
-      // Linha com a frase original (apenas leitura)
+      // Frase original (campo somente leitura)
       var originalDiv = document.createElement('div');
       originalDiv.className = 'original-phrase';
       var originalInput = document.createElement('input');
@@ -95,7 +92,7 @@
       originalDiv.appendChild(originalInput);
       blockDiv.appendChild(originalDiv);
       
-      // Se houver substituições para este número, cria os blocos correspondentes
+      // Substituições (se houver)
       if (substituicoesGroup && substituicoesGroup.length > 0) {
         var subsContainer = document.createElement('div');
         subsContainer.className = 'substituicoes';
@@ -103,7 +100,7 @@
           var subDiv = document.createElement('div');
           subDiv.className = 'substituicao';
           
-          // Linha de resumo: código e campo editável para o resumo
+          // Linha com código e resumo (campo editável)
           var summaryLine = document.createElement('div');
           summaryLine.className = 'summary-line';
           var codeSpan = document.createElement('span');
@@ -141,7 +138,6 @@
       return blockDiv;
     }
 
-    // Carrega os dois JSON e monta a página
     Promise.all([
       loadJSON('frasesOriginais.json'),
       loadJSON('substituicoes.json')
@@ -149,11 +145,10 @@
     .then(function([originais, substituicoes]) {
       var content = document.getElementById('content');
 
-      // Agrupa as substituições por número (extraindo a parte numérica do código, ex: "1a" -> "1")
+      // Agrupa as substituições por número (extraindo a parte numérica do código, exemplo: "1a" -> "1")
       var subsPorNumero = {};
-      for (var key in substituicoes) {
-        if (substituicoes.hasOwnProperty(key)) {
-          var sub = substituicoes[key];
+      if (Array.isArray(substituicoes)) {
+        substituicoes.forEach(function(sub) {
           var match = sub.codigo.match(/^(\d+)/);
           if (match) {
             var num = match[1];
@@ -162,18 +157,44 @@
             }
             subsPorNumero[num].push(sub);
           }
+        });
+      } else {
+        for (var key in substituicoes) {
+          if (substituicoes.hasOwnProperty(key)) {
+            var sub = substituicoes[key];
+            var match = sub.codigo.match(/^(\d+)/);
+            if (match) {
+              var num = match[1];
+              if (!subsPorNumero[num]) {
+                subsPorNumero[num] = [];
+              }
+              subsPorNumero[num].push(sub);
+            }
+          }
         }
       }
 
-      // Para cada número presente no JSON de frases originais, monta o bloco
-      for (var num in originais) {
-        if (originais.hasOwnProperty(num)) {
-          var dataOriginal = originais[num];
-          var subsGroup = subsPorNumero[num] || [];
-          var block = createBlock(num, dataOriginal, subsGroup);
-          content.appendChild(block);
+      // Define as chaves baseadas nos números contidos no arquivo originais.
+      var keys = [];
+      if (Array.isArray(originais)) {
+        // Se for array, usa (índice+1) para numerar (assim o primeiro item será "1")
+        for (var i = 0; i < originais.length; i++) {
+          keys.push((i + 1).toString());
         }
+      } else {
+        keys = Object.keys(originais);
       }
+      
+      // Ordena as chaves numericamente
+      keys.sort(function(a, b) { return Number(a) - Number(b); });
+      
+      // Cria os blocos utilizando as chaves do JSON
+      keys.forEach(function(num, index) {
+        var dataOriginal = Array.isArray(originais) ? originais[index] : originais[num];
+        var subsGroup = subsPorNumero[num] || [];
+        var block = createBlock(num, dataOriginal, subsGroup);
+        content.appendChild(block);
+      });
     })
     .catch(function(err) {
       console.error('Erro ao carregar os arquivos JSON:', err);
