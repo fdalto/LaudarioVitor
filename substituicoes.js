@@ -38,7 +38,10 @@ function montarMenu(frasesOriginais, substituicoes, rotulosAlternativos) {
     normal.className = 'normal';
     normal.innerHTML = `<span class="numero-verde">${numero}</span> Normal`;
     normal.style.cursor = 'pointer';
-    normal.onclick = () => restaurarFrase(numero, frasesOriginais);
+    normal.onclick = () => {
+      restaurarFrase(numero, frasesOriginais);
+      removerConclusao(numero);
+    };
     grupo.appendChild(normal);
 
     // Cria os botões das substituições, com texto resumido
@@ -50,7 +53,10 @@ function montarMenu(frasesOriginais, substituicoes, rotulosAlternativos) {
         const botao = document.createElement('button');
         botao.className = 'frase';
         botao.innerText = resumo;
-        botao.onclick = () => substituirFrase(numero, frase);
+        botao.onclick = () => {
+          substituirFrase(numero, frase);
+          if (conclusao) atualizarConclusao(numero, conclusao);
+        };        
         grupo.appendChild(botao);
       });
     }
@@ -76,4 +82,26 @@ function restaurarFrase(numero, frasesOriginais) {
     p.innerText = frasesOriginais[numero];
     p.style.display = 'block';
   }
+}
+
+const conclusaoDiv = document.getElementById('conclusao-dinamica');
+const frasesConclusaoAtivas = new Map(); // chave: numero, valor: texto
+
+function atualizarConclusao(numero, texto) {
+  frasesConclusaoAtivas.set(numero, texto);
+  renderizarConclusao();
+}
+
+function removerConclusao(numero) {
+  frasesConclusaoAtivas.delete(numero);
+  renderizarConclusao();
+}
+
+function renderizarConclusao() {
+  conclusaoDiv.innerHTML = "";
+  frasesConclusaoAtivas.forEach((texto) => {
+    const p = document.createElement("p");
+    p.innerText = `- ${texto}`;
+    conclusaoDiv.appendChild(p);
+  });
 }
