@@ -16,13 +16,13 @@
   },
   {
     "numero": 4,
-    "frase": "- Menisco medial de morfologia, contornos e intensidade de sinal habituais.",
-    "rotulo": "Menisco Medial"
+    "frase": "- Menisco lateral de morfologia, contornos e intensidade de sinal habituais.",
+    "rotulo": "Menisco Lateral"
   },
   {
     "numero": 5,
-    "frase": "- Menisco lateral de morfologia, contornos e intensidade de sinal habituais.",
-    "rotulo": "Menisco Lateral"
+    "frase": "- Menisco medial de morfologia, contornos e intensidade de sinal habituais.",
+    "rotulo": "Menisco Medial"
   },
   {
     "numero": 6,
