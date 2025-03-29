@@ -49,11 +49,29 @@
       width: 90%;
       padding: 3px;
     }
+    /* Estilo para os botões de download */
+    #download-buttons {
+      margin-top: 20px;
+    }
+    button.download-btn {
+      background-color: lightblue;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      margin-right: 10px;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
   <h1>Editor de JSON de Relatórios</h1>
   <div id="content"></div>
+  
+  <!-- Botões de Download -->
+  <div id="download-buttons">
+    <button id="download-originais-btn" class="download-btn">Baixar frasesOriginais_editado.json</button>
+    <button id="download-substituicoes-btn" class="download-btn">Baixar substituicoes_editado.json</button>
+  </div>
   
   <script>
     // Função para carregar um arquivo JSON
@@ -65,6 +83,7 @@
     function createBlock(numero, dataOriginal, substituicoesGroup) {
       var blockDiv = document.createElement('div');
       blockDiv.className = 'block';
+      blockDiv.dataset.number = numero; // Armazena o número no atributo data-number
       
       // Cabeçalho: número (não editável) e rótulo (editável)
       var headerDiv = document.createElement('div');
@@ -92,13 +111,14 @@
       originalDiv.appendChild(originalInput);
       blockDiv.appendChild(originalDiv);
       
-      // Substituições (se houver)
+      // Cria os blocos de substituições (se houver)
       if (substituicoesGroup && substituicoesGroup.length > 0) {
         var subsContainer = document.createElement('div');
         subsContainer.className = 'substituicoes';
         substituicoesGroup.forEach(function(sub) {
           var subDiv = document.createElement('div');
           subDiv.className = 'substituicao';
+          subDiv.dataset.codigo = sub.codigo; // Armazena o código para posterior salvamento
           
           // Linha com código e resumo (campo editável)
           var summaryLine = document.createElement('div');
@@ -138,6 +158,55 @@
       return blockDiv;
     }
 
+    // Funções de salvamento dos JSON editados
+    function saveOriginais() {
+      var originaisData = {};
+      document.querySelectorAll('.block').forEach(function(block) {
+        var key = block.dataset.number;
+        var rotulo = block.querySelector('.rotulo input').value;
+        var frase = block.querySelector('.original-phrase input').value;
+        originaisData[key] = { rotulo: rotulo, frase: frase };
+      });
+      var dataStr = JSON.stringify(originaisData, null, 2);
+      var blob = new Blob([dataStr], { type: "application/json" });
+      var url = URL.createObjectURL(blob);
+      
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = "frasesOriginais_editado.json";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+    
+    function saveSubstituicoes() {
+      var substituicoesData = [];
+      document.querySelectorAll('.substituicao').forEach(function(sub) {
+        var codigo = sub.dataset.codigo;
+        var resumo = sub.querySelector('.summary-line input').value;
+        var frase = sub.querySelector('.phrase-line input').value;
+        var conclusao = sub.querySelector('.conclusion-line input').value;
+        substituicoesData.push({ codigo: codigo, resumo: resumo, frase: frase, conclusao: conclusao });
+      });
+      var dataStr = JSON.stringify(substituicoesData, null, 2);
+      var blob = new Blob([dataStr], { type: "application/json" });
+      var url = URL.createObjectURL(blob);
+      
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = "substituicoes_editado.json";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    // Adiciona os event listeners aos botões de download
+    document.getElementById('download-originais-btn').addEventListener('click', saveOriginais);
+    document.getElementById('download-substituicoes-btn').addEventListener('click', saveSubstituicoes);
+
+    // Carrega os dois JSON e monta a página
     Promise.all([
       loadJSON('frasesOriginais.json'),
       loadJSON('substituicoes.json')
@@ -174,10 +243,10 @@
         }
       }
 
-      // Define as chaves baseadas nos números contidos no arquivo originais.
+      // Define as chaves baseadas nos números contidos no JSON de frases originais.
       var keys = [];
       if (Array.isArray(originais)) {
-        // Se for array, usa (índice+1) para numerar (assim o primeiro item será "1")
+        // Se for array, utiliza (índice+1) para numerar
         for (var i = 0; i < originais.length; i++) {
           keys.push((i + 1).toString());
         }
