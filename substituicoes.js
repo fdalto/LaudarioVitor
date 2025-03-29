@@ -21,6 +21,7 @@ Promise.all([
     rotulosAlternativos[codigo] = resumo;
   });
 
+  gerarCampoRelatorio(frasesOriginaisArray);
   montarMenu(frasesOriginais, frasesOriginaisInfo, substituicoes, rotulosAlternativos);
 });
 
@@ -44,6 +45,36 @@ function renderizarConclusao() {
     p.innerText = `- ${texto}`;
     conclusaoDiv.appendChild(p);
   });
+}
+
+function gerarCampoRelatorio(frasesOriginaisArray) {
+  const campo = document.getElementById('campoRelatorio');
+  frasesOriginaisArray.forEach(({ numero, frase }) => {
+    const p = document.createElement('p');
+    p.dataset.linha = numero;
+    p.innerText = frase;
+    campo.appendChild(p);
+  });
+
+  const blocoConclusaoTitulo = document.createElement('p');
+  blocoConclusaoTitulo.innerHTML = '<strong>Impressão radiológica:</strong>';
+  campo.appendChild(blocoConclusaoTitulo);
+
+  const conclusaoDinamica = document.createElement('div');
+  conclusaoDinamica.id = 'conclusao-dinamica';
+
+  const p1 = document.createElement('p');
+  p1.innerText = '- Ressonância magnética do joelho XXX sem evidência de alterações patológicas.';
+  const p2 = document.createElement('p');
+  p2.innerText = '- Ligamento cruzado anterior e meniscos sem evidencias de rupturas nas imagens analisadas.';
+
+  conclusaoDinamica.appendChild(p1);
+  conclusaoDinamica.appendChild(p2);
+  campo.appendChild(conclusaoDinamica);
+
+  const fim = document.createElement('p');
+  fim.innerHTML = '<em>*FIM*</em>';
+  campo.appendChild(fim);
 }
 
 function montarMenu(frasesOriginais, frasesOriginaisInfo, substituicoes, rotulosAlternativos) {
