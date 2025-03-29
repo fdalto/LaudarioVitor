@@ -77,10 +77,6 @@ function gerarCampoRelatorio(frasesOriginaisArray) {
   conclusaoDinamica.appendChild(p1);
   conclusaoDinamica.appendChild(p2);
   campo.appendChild(conclusaoDinamica);
-
-  const fim = document.createElement('p');
-  fim.innerHTML = '<em>*FIM*</em>';
-  campo.appendChild(fim);
 }
 
 function montarMenu(frasesOriginais, frasesOriginaisInfo, substituicoes, rotulosAlternativos) {
