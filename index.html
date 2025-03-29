@@ -1,278 +1,105 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Editor de JSON de Relatórios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferramenta de Auxílio em Relatórios Médicos de RM</title>
   <style>
     body {
+      background-color: #ADD8E6; /* Azul claro */
+      margin: 0;
       font-family: Arial, sans-serif;
-      margin: 20px;
     }
-    .block {
-      border: 1px solid #ccc;
-      margin-bottom: 15px;
-      padding: 10px;
+    /* Seção superior: duas imagens grandes */
+    .top-section {
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-    .block > div {
-      margin-bottom: 8px;
+    .top-section img {
+      width: 80%;
+      height: auto;
+      margin: 10%;
     }
-    .number {
-      font-weight: bold;
-      margin-right: 5px;
+    /* Seção inferior: botões para seleção das articulações */
+    .bottom-section {
+      height: 50vh;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding: 20px;
+      background-color: #f0f0f0;
     }
-    .rotulo input {
-      width: 70%;
-      padding: 3px;
-    }
-    .original-phrase input {
-      width: 95%;
-      padding: 3px;
-    }
-    .substituicoes {
-      margin-left: 20px;
-      border-left: 2px solid #aaa;
-      padding-left: 10px;
-    }
-    .substituicao {
-      margin-bottom: 10px;
-    }
-    .summary-line, .phrase-line, .conclusion-line {
-      margin-bottom: 5px;
-    }
-    .summary-line span {
-      font-weight: bold;
-      margin-right: 5px;
-    }
-    .summary-line input,
-    .phrase-line input,
-    .conclusion-line input {
-      width: 90%;
-      padding: 3px;
-    }
-    /* Estilo para os botões de download */
-    #download-buttons {
-      margin-top: 20px;
-    }
-    button.download-btn {
-      background-color: lightblue;
+    button {
+      padding: 10px 20px;
       border: none;
-      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+    /* Botão ativo (atualmente apenas o Joelho) */
+    .ativo {
+      background-color: #4CAF50;
+      color: #fff;
       cursor: pointer;
-      margin-right: 10px;
-      font-size: 14px;
+    }
+    .ativo:hover {
+      background-color: #45a049;
+    }
+    /* Botões inativos: menos cor e com mais brilho */
+    .inativo {
+      background-color: #ccc;
+      color: #666;
+      filter: brightness(1.2);
+      cursor: not-allowed;
     }
   </style>
 </head>
 <body>
-  <h1>Editor de JSON de Relatórios</h1>
-  <div id="content"></div>
-  
-  <!-- Botões de Download -->
-  <div id="download-buttons">
-    <button id="download-originais-btn" class="download-btn">Baixar frasesOriginais_editado.json</button>
-    <button id="download-substituicoes-btn" class="download-btn">Baixar substituicoes_editado.json</button>
+  <!-- Seção superior com duas imagens grandes -->
+  <div class="top-section">
+    <!-- Link para o site de edição de relatórios -->
+    <a href="editor_relatorios.html">
+      <img src="editar.png" alt="Editar Relatórios">
+    </a>
+    <!-- Link para o site que cria JSON -->
+    <a href="json_creator.html">
+      <img src="json.png" alt="Criar JSON">
+    </a>
   </div>
-  
+
+  <!-- Seção inferior com botões das articulações -->
+  <div class="bottom-section">
+    <button class="inativo" disabled>Coluna Cervical</button>
+    <button class="inativo" disabled>Coluna Torácica</button>
+    <button class="inativo" disabled>Coluna Lombar</button>
+    <button class="inativo" disabled>Ombro</button>
+    <button class="inativo" disabled>Cotovelo</button>
+    <button class="inativo" disabled>Punho</button>
+    <button class="inativo" disabled>Braço</button>
+    <button class="inativo" disabled>Quadril</button>
+    <button class="inativo" disabled>Coxa</button>
+    <button class="inativo" disabled>Bacia</button>
+    <button class="ativo" id="joelho-btn">Joelho</button>
+    <button class="inativo" disabled>Perna</button>
+    <button class="inativo" disabled>Tornozelo</button>
+    <button class="inativo" disabled>Pé</button>
+    <button class="inativo" disabled>Plexo Braquial</button>
+    <button class="inativo" disabled>Plexo Lombar</button>
+  </div>
+
   <script>
-    // Função para carregar um arquivo JSON
-    function loadJSON(url) {
-      return fetch(url).then(response => response.json());
-    }
-
-    // Cria o bloco para cada número com os dados originais e suas substituições
-    function createBlock(numero, dataOriginal, substituicoesGroup) {
-      var blockDiv = document.createElement('div');
-      blockDiv.className = 'block';
-      // Armazena o número exatamente como recebido
-      blockDiv.dataset.number = numero;
-      
-      // Cabeçalho: número (não editável) e rótulo (editável)
-      var headerDiv = document.createElement('div');
-      var numberSpan = document.createElement('span');
-      numberSpan.className = 'number';
-      numberSpan.textContent = numero + '.';
-      headerDiv.appendChild(numberSpan);
-      
-      var rotuloDiv = document.createElement('span');
-      rotuloDiv.className = 'rotulo';
-      var rotuloInput = document.createElement('input');
-      rotuloInput.type = 'text';
-      rotuloInput.value = dataOriginal.rotulo || '';
-      rotuloDiv.appendChild(rotuloInput);
-      headerDiv.appendChild(rotuloDiv);
-      blockDiv.appendChild(headerDiv);
-      
-      // Frase original (campo somente leitura)
-      var originalDiv = document.createElement('div');
-      originalDiv.className = 'original-phrase';
-      var originalInput = document.createElement('input');
-      originalInput.type = 'text';
-      originalInput.value = dataOriginal.frase || '';
-      originalInput.readOnly = true;
-      originalDiv.appendChild(originalInput);
-      blockDiv.appendChild(originalDiv);
-      
-      // Cria os blocos de substituições (se houver)
-      if (substituicoesGroup && substituicoesGroup.length > 0) {
-        var subsContainer = document.createElement('div');
-        subsContainer.className = 'substituicoes';
-        substituicoesGroup.forEach(function(sub) {
-          var subDiv = document.createElement('div');
-          subDiv.className = 'substituicao';
-          subDiv.dataset.codigo = sub.codigo;
-          
-          // Linha com código e resumo (campo editável)
-          var summaryLine = document.createElement('div');
-          summaryLine.className = 'summary-line';
-          var codeSpan = document.createElement('span');
-          codeSpan.textContent = sub.codigo;
-          summaryLine.appendChild(codeSpan);
-          var resumoInput = document.createElement('input');
-          resumoInput.type = 'text';
-          resumoInput.value = sub.resumo || '';
-          summaryLine.appendChild(resumoInput);
-          subDiv.appendChild(summaryLine);
-          
-          // Linha com a frase alterada (editável)
-          var phraseLine = document.createElement('div');
-          phraseLine.className = 'phrase-line';
-          var fraseInput = document.createElement('input');
-          fraseInput.type = 'text';
-          fraseInput.value = sub.frase || '';
-          phraseLine.appendChild(fraseInput);
-          subDiv.appendChild(phraseLine);
-          
-          // Linha com a conclusão (editável, sempre criada)
-          var conclLine = document.createElement('div');
-          conclLine.className = 'conclusion-line';
-          var conclInput = document.createElement('input');
-          conclInput.type = 'text';
-          conclInput.value = sub.conclusao || '';
-          conclLine.appendChild(conclInput);
-          subDiv.appendChild(conclLine);
-          
-          subsContainer.appendChild(subDiv);
-        });
-        blockDiv.appendChild(subsContainer);
-      }
-      
-      return blockDiv;
-    }
-
-    // Função para salvar o JSON de frasesOriginais no formato desejado (array de objetos)
-    function saveOriginais() {
-      var originaisArray = [];
-      document.querySelectorAll('.block').forEach(function(block) {
-        // Usa o número salvo no dataset, convertendo para número
-        var numero = Number(block.dataset.number);
-        var rotulo = block.querySelector('.rotulo input').value;
-        var frase = block.querySelector('.original-phrase input').value;
-        originaisArray.push({ numero: numero, rotulo: rotulo, frase: frase });
-      });
-      var dataStr = JSON.stringify(originaisArray, null, 2);
-      var blob = new Blob([dataStr], { type: "application/json" });
-      var url = URL.createObjectURL(blob);
-      
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = "frasesOriginais_editado.json";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
+    // Variável para armazenar a articulação selecionada
+    let selectedJoint = "";
     
-    // Função para salvar o JSON de substituicoes no formato desejado (array de objetos com o campo "numero")
-    function saveSubstituicoes() {
-      var substituicoesArray = [];
-      document.querySelectorAll('.substituicao').forEach(function(sub) {
-        // Obtém o número do bloco pai (preservado conforme o arquivo original)
-        var parentBlock = sub.closest('.block');
-        var numero = Number(parentBlock.dataset.number);
-        var codigo = sub.dataset.codigo;
-        var resumo = sub.querySelector('.summary-line input').value;
-        var frase = sub.querySelector('.phrase-line input').value;
-        var conclusao = sub.querySelector('.conclusion-line input').value;
-        substituicoesArray.push({ numero: numero, codigo: codigo, resumo: resumo, frase: frase, conclusao: conclusao });
-      });
-      var dataStr = JSON.stringify(substituicoesArray, null, 2);
-      var blob = new Blob([dataStr], { type: "application/json" });
-      var url = URL.createObjectURL(blob);
-      
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = "substituicoes_editado.json";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-    }
-
-    // Adiciona os event listeners aos botões de download
-    document.getElementById('download-originais-btn').addEventListener('click', saveOriginais);
-    document.getElementById('download-substituicoes-btn').addEventListener('click', saveSubstituicoes);
-
-    // Carrega os dois JSON e monta a página
-    Promise.all([
-      loadJSON('frasesOriginais.json'),
-      loadJSON('substituicoes.json')
-    ])
-    .then(function([originais, substituicoes]) {
-      var content = document.getElementById('content');
-
-      // Agrupa as substituições por número (extraindo a parte numérica do código, ex: "1a" -> "1")
-      var subsPorNumero = {};
-      if (Array.isArray(substituicoes)) {
-        substituicoes.forEach(function(sub) {
-          var match = sub.codigo.match(/^(\d+)/);
-          if (match) {
-            var num = match[1];
-            if (!subsPorNumero[num]) {
-              subsPorNumero[num] = [];
-            }
-            subsPorNumero[num].push(sub);
-          }
-        });
-      } else {
-        for (var key in substituicoes) {
-          if (substituicoes.hasOwnProperty(key)) {
-            var sub = substituicoes[key];
-            var match = sub.codigo.match(/^(\d+)/);
-            if (match) {
-              var num = match[1];
-              if (!subsPorNumero[num]) {
-                subsPorNumero[num] = [];
-              }
-              subsPorNumero[num].push(sub);
-            }
-          }
-        }
-      }
-
-      // Monta os blocos preservando o número conforme consta no arquivo
-      if (Array.isArray(originais)) {
-        // Se for array, utiliza o campo "numero" se existir, senão (index+1)
-        originais.forEach(function(item, index) {
-          var numero = (item.numero !== undefined) ? item.numero : (index + 1);
-          var subsGroup = subsPorNumero[numero] || [];
-          var block = createBlock(numero, item, subsGroup);
-          content.appendChild(block);
-        });
-      } else {
-        // Se for objeto, usa as chaves do próprio objeto
-        var keys = Object.keys(originais);
-        keys.sort(function(a, b) { return Number(a) - Number(b); });
-        keys.forEach(function(key) {
-          var dataOriginal = originais[key];
-          var numero = key;
-          var subsGroup = subsPorNumero[numero] || [];
-          var block = createBlock(numero, dataOriginal, subsGroup);
-          content.appendChild(block);
-        });
-      }
-    })
-    .catch(function(err) {
-      console.error('Erro ao carregar os arquivos JSON:', err);
+    // Adiciona o evento de clique para o botão ativo (Joelho)
+    document.getElementById("joelho-btn").addEventListener("click", function() {
+      selectedJoint = this.innerText;
+      console.log("Articulação selecionada: " + selectedJoint);
+      // Aqui você pode implementar a lógica para direcionar ou atualizar a interface conforme necessário
     });
   </script>
 </body>
