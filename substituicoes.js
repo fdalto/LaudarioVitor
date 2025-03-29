@@ -5,11 +5,13 @@ Promise.all([
 ]).then(([frasesOriginaisArray, substituicoesArray]) => {
 
   const frasesOriginais = {};            // Frases normais numeradas
+  const frasesOriginaisInfo = {};        // Inclui também os rótulos
   const substituicoes = {};              // Frases alternativas agrupadas por número
   const rotulosAlternativos = {};        // Rótulo resumido de cada alternativa
 
-  frasesOriginaisArray.forEach(({ numero, frase }) => {
+  frasesOriginaisArray.forEach(({ numero, frase, rotulo }) => {
     frasesOriginais[numero] = frase;
+    frasesOriginaisInfo[numero] = { frase, rotulo };
   });
 
   substituicoesArray.forEach((item) => {
@@ -19,7 +21,7 @@ Promise.all([
     rotulosAlternativos[codigo] = resumo;
   });
 
-  montarMenu(frasesOriginais, substituicoes, rotulosAlternativos);
+  montarMenu(frasesOriginais, frasesOriginaisInfo, substituicoes, rotulosAlternativos);
 });
 
 const conclusaoDiv = document.getElementById('conclusao-dinamica');
@@ -44,29 +46,7 @@ function renderizarConclusao() {
   });
 }
 
-const rotulosMenu = {
-  1: "Ossos",
-  2: "Derrame",
-  3: "Fossa Poplítea",
-  4: "Menisco Medial",
-  5: "Menisco Lateral",
-  6: "Ligamento Cruzado Anterior",
-  7: "Ligamentos Colaterais",
-  8: "Ligamento Cruzado Posterior",
-  9: "Canto Posterolateral",
-  10: "Pata de Ganso",
-  11: "Bursa Infrapatelar",
-  12: "Tendão Quadricipital/Patelar",
-  13: "Gordura de Hoffa",
-  14: "Cartilagem Femoropatelar",
-  15: "Cartilagem Femorotibial Medial",
-  16: "Cartilagem Femorotibial Lateral",
-  17: "Patela / Tróclea",
-  18: "Musculatura / Vasos",
-  99: "Achado Adicional"
-};
-
-function montarMenu(frasesOriginais, substituicoes, rotulosAlternativos) {
+function montarMenu(frasesOriginais, frasesOriginaisInfo, substituicoes, rotulosAlternativos) {
   const menuDiv = document.getElementById('menu');
 
   Object.entries(frasesOriginais).forEach(([numero, fraseNormal]) => {
@@ -75,7 +55,7 @@ function montarMenu(frasesOriginais, substituicoes, rotulosAlternativos) {
 
     const normal = document.createElement('span');
     normal.className = 'normal';
-    const rotulo = rotulosMenu[numero] || "Normal";
+    const rotulo = frasesOriginaisInfo[numero]?.rotulo || "Normal";
     normal.innerHTML = `<span class="numero-verde">${numero}</span> ${rotulo}`;
     normal.style.cursor = 'pointer';
     normal.onclick = () => {
