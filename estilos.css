@@ -38,7 +38,7 @@ body {
   }
   
   .frase {
-    background: orange;
+    background: rgb(144, 173, 240);
     border: none;
     padding: 6px;
     margin: 3px 0;
@@ -51,7 +51,7 @@ body {
   }
   
   .frase:hover {
-    background: darkorange;
+    background: rgb(102, 125, 208);
     color: white;
   }
   
