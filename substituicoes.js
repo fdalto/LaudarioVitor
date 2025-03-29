@@ -25,8 +25,11 @@ Promise.all([
   montarMenu(frasesOriginais, frasesOriginaisInfo, substituicoes, rotulosAlternativos);
 });
 
-const conclusaoDiv = document.getElementById('conclusao-dinamica');
 const frasesConclusaoAtivas = new Map();
+
+function getConclusaoDiv() {
+  return document.getElementById('conclusao-dinamica');
+}
 
 function atualizarConclusao(numero, texto) {
   frasesConclusaoAtivas.set(numero, texto);
@@ -39,11 +42,14 @@ function removerConclusao(numero) {
 }
 
 function renderizarConclusao() {
-  conclusaoDiv.innerHTML = "";
+  const div = getConclusaoDiv();
+  if (!div) return;
+
+  div.innerHTML = "";
   frasesConclusaoAtivas.forEach((texto) => {
     const p = document.createElement("p");
     p.innerText = `- ${texto}`;
-    conclusaoDiv.appendChild(p);
+    div.appendChild(p);
   });
 }
 
