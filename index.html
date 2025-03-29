@@ -158,16 +158,16 @@
       return blockDiv;
     }
 
-    // Funções de salvamento dos JSON editados
+    // Função para salvar o JSON de frasesOriginais no formato desejado (array de objetos)
     function saveOriginais() {
-      var originaisData = {};
+      var originaisArray = [];
       document.querySelectorAll('.block').forEach(function(block) {
-        var key = block.dataset.number;
+        var numero = parseInt(block.dataset.number, 10);
         var rotulo = block.querySelector('.rotulo input').value;
         var frase = block.querySelector('.original-phrase input').value;
-        originaisData[key] = { rotulo: rotulo, frase: frase };
+        originaisArray.push({ numero: numero, rotulo: rotulo, frase: frase });
       });
-      var dataStr = JSON.stringify(originaisData, null, 2);
+      var dataStr = JSON.stringify(originaisArray, null, 2);
       var blob = new Blob([dataStr], { type: "application/json" });
       var url = URL.createObjectURL(blob);
       
@@ -180,16 +180,20 @@
       URL.revokeObjectURL(url);
     }
     
+    // Função para salvar o JSON de substituicoes no formato desejado (array de objetos com o campo "numero")
     function saveSubstituicoes() {
-      var substituicoesData = [];
+      var substituicoesArray = [];
       document.querySelectorAll('.substituicao').forEach(function(sub) {
+        // Obtém o número do bloco pai
+        var parentBlock = sub.closest('.block');
+        var numero = parseInt(parentBlock.dataset.number, 10);
         var codigo = sub.dataset.codigo;
         var resumo = sub.querySelector('.summary-line input').value;
         var frase = sub.querySelector('.phrase-line input').value;
         var conclusao = sub.querySelector('.conclusion-line input').value;
-        substituicoesData.push({ codigo: codigo, resumo: resumo, frase: frase, conclusao: conclusao });
+        substituicoesArray.push({ numero: numero, codigo: codigo, resumo: resumo, frase: frase, conclusao: conclusao });
       });
-      var dataStr = JSON.stringify(substituicoesData, null, 2);
+      var dataStr = JSON.stringify(substituicoesArray, null, 2);
       var blob = new Blob([dataStr], { type: "application/json" });
       var url = URL.createObjectURL(blob);
       
@@ -243,23 +247,16 @@
         }
       }
 
-      // Define as chaves baseadas nos números contidos no JSON de frases originais.
-      var keys = [];
-      if (Array.isArray(originais)) {
-        // Se for array, utiliza (índice+1) para numerar
-        for (var i = 0; i < originais.length; i++) {
-          keys.push((i + 1).toString());
-        }
-      } else {
-        keys = Object.keys(originais);
-      }
+      // Define as chaves baseadas nos números contidos no JSON de frasesOriginais.
+      // O formato recebido é um objeto onde as chaves são os números.
+      var keys = Object.keys(originais);
       
       // Ordena as chaves numericamente
       keys.sort(function(a, b) { return Number(a) - Number(b); });
       
       // Cria os blocos utilizando as chaves do JSON
-      keys.forEach(function(num, index) {
-        var dataOriginal = Array.isArray(originais) ? originais[index] : originais[num];
+      keys.forEach(function(num) {
+        var dataOriginal = originais[num];
         var subsGroup = subsPorNumero[num] || [];
         var block = createBlock(num, dataOriginal, subsGroup);
         content.appendChild(block);
