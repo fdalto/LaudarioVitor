@@ -83,7 +83,8 @@
     function createBlock(numero, dataOriginal, substituicoesGroup) {
       var blockDiv = document.createElement('div');
       blockDiv.className = 'block';
-      blockDiv.dataset.number = numero; // Armazena o número no atributo data-number
+      // Armazena o número exatamente como recebido
+      blockDiv.dataset.number = numero;
       
       // Cabeçalho: número (não editável) e rótulo (editável)
       var headerDiv = document.createElement('div');
@@ -118,7 +119,7 @@
         substituicoesGroup.forEach(function(sub) {
           var subDiv = document.createElement('div');
           subDiv.className = 'substituicao';
-          subDiv.dataset.codigo = sub.codigo; // Armazena o código para posterior salvamento
+          subDiv.dataset.codigo = sub.codigo;
           
           // Linha com código e resumo (campo editável)
           var summaryLine = document.createElement('div');
@@ -162,7 +163,8 @@
     function saveOriginais() {
       var originaisArray = [];
       document.querySelectorAll('.block').forEach(function(block) {
-        var numero = parseInt(block.dataset.number, 10);
+        // Usa o número salvo no dataset, convertendo para número
+        var numero = Number(block.dataset.number);
         var rotulo = block.querySelector('.rotulo input').value;
         var frase = block.querySelector('.original-phrase input').value;
         originaisArray.push({ numero: numero, rotulo: rotulo, frase: frase });
@@ -184,9 +186,9 @@
     function saveSubstituicoes() {
       var substituicoesArray = [];
       document.querySelectorAll('.substituicao').forEach(function(sub) {
-        // Obtém o número do bloco pai
+        // Obtém o número do bloco pai (preservado conforme o arquivo original)
         var parentBlock = sub.closest('.block');
-        var numero = parseInt(parentBlock.dataset.number, 10);
+        var numero = Number(parentBlock.dataset.number);
         var codigo = sub.dataset.codigo;
         var resumo = sub.querySelector('.summary-line input').value;
         var frase = sub.querySelector('.phrase-line input').value;
@@ -218,7 +220,7 @@
     .then(function([originais, substituicoes]) {
       var content = document.getElementById('content');
 
-      // Agrupa as substituições por número (extraindo a parte numérica do código, exemplo: "1a" -> "1")
+      // Agrupa as substituições por número (extraindo a parte numérica do código, ex: "1a" -> "1")
       var subsPorNumero = {};
       if (Array.isArray(substituicoes)) {
         substituicoes.forEach(function(sub) {
@@ -247,20 +249,27 @@
         }
       }
 
-      // Define as chaves baseadas nos números contidos no JSON de frasesOriginais.
-      // O formato recebido é um objeto onde as chaves são os números.
-      var keys = Object.keys(originais);
-      
-      // Ordena as chaves numericamente
-      keys.sort(function(a, b) { return Number(a) - Number(b); });
-      
-      // Cria os blocos utilizando as chaves do JSON
-      keys.forEach(function(num) {
-        var dataOriginal = originais[num];
-        var subsGroup = subsPorNumero[num] || [];
-        var block = createBlock(num, dataOriginal, subsGroup);
-        content.appendChild(block);
-      });
+      // Monta os blocos preservando o número conforme consta no arquivo
+      if (Array.isArray(originais)) {
+        // Se for array, utiliza o campo "numero" se existir, senão (index+1)
+        originais.forEach(function(item, index) {
+          var numero = (item.numero !== undefined) ? item.numero : (index + 1);
+          var subsGroup = subsPorNumero[numero] || [];
+          var block = createBlock(numero, item, subsGroup);
+          content.appendChild(block);
+        });
+      } else {
+        // Se for objeto, usa as chaves do próprio objeto
+        var keys = Object.keys(originais);
+        keys.sort(function(a, b) { return Number(a) - Number(b); });
+        keys.forEach(function(key) {
+          var dataOriginal = originais[key];
+          var numero = key;
+          var subsGroup = subsPorNumero[numero] || [];
+          var block = createBlock(numero, dataOriginal, subsGroup);
+          content.appendChild(block);
+        });
+      }
     })
     .catch(function(err) {
       console.error('Erro ao carregar os arquivos JSON:', err);
