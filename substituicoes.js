@@ -15,9 +15,9 @@ Promise.all([
   });
 
   substituicoesArray.forEach((item) => {
-    const { numero, codigo, resumo, frase, conclusao } = item;
+    const { numero, codigo, resumo, frase, conclusao, tipo } = item;
     if (!substituicoes[numero]) substituicoes[numero] = [];
-    substituicoes[numero].push(item); // guarda o objeto completo
+    substituicoes[numero].push({ codigo, frase, conclusao, tipo });
     rotulosAlternativos[codigo] = resumo;
   });
 
@@ -77,6 +77,10 @@ function gerarCampoRelatorio(frasesOriginaisArray) {
   conclusaoDinamica.appendChild(p1);
   conclusaoDinamica.appendChild(p2);
   campo.appendChild(conclusaoDinamica);
+
+  const fim = document.createElement('p');
+  fim.innerHTML = '<em>*FIM*</em>';
+  campo.appendChild(fim);
 }
 
 function montarMenu(frasesOriginais, frasesOriginaisInfo, substituicoes, rotulosAlternativos) {
@@ -98,19 +102,44 @@ function montarMenu(frasesOriginais, frasesOriginaisInfo, substituicoes, rotulos
     grupo.appendChild(normal);
 
     if (substituicoes[numero]) {
-      substituicoes[numero].forEach((item, idx) => {
-        const { frase, conclusao } = item;
-        const chave = `${numero}${String.fromCharCode(97 + idx)}`;
-        const resumo = rotulosAlternativos[chave] || frase.substring(0, 40) + "...";
+      substituicoes[numero].forEach((item) => {
+        const { frase, conclusao, tipo = 'substituicao', codigo } = item;
+        const resumo = rotulosAlternativos[codigo] || frase.substring(0, 40) + "...";
 
-        const botao = document.createElement('button');
-        botao.className = 'frase';
-        botao.innerText = resumo;
-        botao.onclick = () => {
-          substituirFrase(numero, frase);
-          if (conclusao) atualizarConclusao(parseInt(numero), conclusao);
-        };
-        grupo.appendChild(botao);
+        if (tipo === 'complementar') {
+          const label = document.createElement('label');
+          label.style.display = 'block';
+          const checkbox = document.createElement('input');
+          checkbox.type = 'checkbox';
+          checkbox.onchange = () => {
+            const p = document.querySelector(`p[data-linha='${numero}']`);
+            let span = document.getElementById(`comp-${codigo}`);
+            if (checkbox.checked) {
+              if (!span) {
+                span = document.createElement('span');
+                span.id = `comp-${codigo}`;
+                span.innerText = ' ' + frase;
+                p.appendChild(span);
+              }
+              if (conclusao) atualizarConclusao(parseInt(numero), conclusao);
+            } else {
+              if (span) span.remove();
+              if (conclusao) removerConclusao(parseInt(numero));
+            }
+          };
+          label.appendChild(checkbox);
+          label.appendChild(document.createTextNode(resumo));
+          grupo.appendChild(label);
+        } else {
+          const botao = document.createElement('button');
+          botao.className = 'frase';
+          botao.innerText = resumo;
+          botao.onclick = () => {
+            substituirFrase(numero, frase);
+            if (conclusao) atualizarConclusao(parseInt(numero), conclusao);
+          };
+          grupo.appendChild(botao);
+        }
       });
     }
 
@@ -121,7 +150,9 @@ function montarMenu(frasesOriginais, frasesOriginaisInfo, substituicoes, rotulos
 function substituirFrase(numero, novaFrase) {
   const p = document.querySelector(`p[data-linha='${numero}']`);
   if (p) {
-    p.innerText = `- ${novaFrase}`;
+    const complementares = Array.from(p.querySelectorAll("span[id^='comp-']"));
+    p.innerHTML = `- ${novaFrase}`;
+    complementares.forEach(span => p.appendChild(span));
     p.style.display = 'block';
   }
 }
@@ -129,7 +160,9 @@ function substituirFrase(numero, novaFrase) {
 function restaurarFrase(numero, frasesOriginais) {
   const p = document.querySelector(`p[data-linha='${numero}']`);
   if (p && frasesOriginais[numero]) {
-    p.innerText = frasesOriginais[numero];
+    const complementares = Array.from(p.querySelectorAll("span[id^='comp-']"));
+    p.innerHTML = frasesOriginais[numero];
+    complementares.forEach(span => p.appendChild(span));
     p.style.display = 'block';
   }
 }

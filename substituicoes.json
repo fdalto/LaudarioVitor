@@ -152,6 +152,7 @@
   {
     "numero": 6,
     "codigo": "6c",
+    "tipo":"complementar",
     "resumo": "Contusão Femorotibial",
     "frase": "Alteração de sinal com padrão de edema na região femorotibial lateral compatível com contusões."
   },
@@ -159,6 +160,7 @@
     "numero": 6,
     "codigo": "6d",
     "resumo": "Translação Anterior da Tíbia",
+    "tipo":"complementar",
     "frase": "Translação anterior da tíbia de cerca de XXX mm (VN até 5-7mm no côndilo femoral lateral)."
   },
   {
@@ -225,6 +227,7 @@
     "numero": 10,
     "codigo": "10b",
     "resumo": "Bursite Anserina",
+    "tipo":"complementar",
     "frase": "Distensão líquida da bursa dos tendões da pata anserina."
   },
   {
