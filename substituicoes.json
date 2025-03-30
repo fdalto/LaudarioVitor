@@ -3,6 +3,7 @@
     "numero": 1,
     "codigo": "1a",
     "resumo": "Osteofitose Marginal",
+    "tipo": "substituicao",
     "frase": "Discreta osteofitose marginal no fêmur, tíbia e patela.",
     "conclusao": "Alterações degenerativas discretas do joelho."
   },
@@ -10,26 +11,31 @@
     "numero": 1,
     "codigo": "1b",
     "resumo": "Osteoartrose",
+    "tipo": "substituicao",
     "frase": "Sinais de osteoartrose, caracterizada por irregularidades condrais, redução do espaço articular e reações osteofitárias marginais, mais evidentes no compartimento femorotibial medial lateral.",
     "conclusao": "Osteoartrose do joelho com condropatia tricompartimental sendo mais acentuada no compartimento XXX."
-
   },
   {
     "numero": 2,
     "codigo": "2a",
     "resumo": "Pequeno Derrame",
-    "frase": "Pequena quantidade de líquido intra-articular."
+    "tipo": "substituicao",
+    "frase": "Pequena quantidade de líquido intra-articular.",
+    "conclusao": ""
   },
   {
     "numero": 2,
     "codigo": "2b",
     "resumo": "Derrame Moderado",
-    "frase": "Moderada quantidade de líquido intra-articular."
+    "tipo": "substituicao",
+    "frase": "Moderada quantidade de líquido intra-articular.",
+    "conclusao": ""
   },
   {
     "numero": 3,
     "codigo": "3a",
     "resumo": "Cisto de Baker",
+    "tipo": "substituicao",
     "frase": "Presença de líquido na bursa gastrocnêmio semimembranoso (cisto de Baker).",
     "conclusao": "Cisto de Baker."
   },
@@ -37,332 +43,432 @@
     "numero": 3,
     "codigo": "3b",
     "resumo": "Filme Líquido na Fossa Poplítea",
+    "tipo": "substituicao",
     "frase": "Presença de pequeno filme líquido na bursa gastrocnêmio semimembranoso.",
-    "conclusao": "Cisto de Baker."
+    "conclusao": "Diminuto cisto de Baker."
   },
   {
     "numero": 4,
     "codigo": "4x",
-    "resumo": "Matematica menisco",
-    "tipo": "matematica",
-    "script": "scripts/calculo_menisco.js"
+    "resumo": "Menisco Discoide",
+    "tipo": "substituicao",
+    "frase": "Menisco lateral com morfologia discoide, apresentando contornos e intensidade de sinal habituais.",
+    "conclusao": ""
   },
   {
     "numero": 4,
     "codigo": "4b",
-    "resumo": "Alterações Degenerativas ML",
+    "resumo": "ADG Intrassubstancial",
+    "tipo": "substituicao",
     "frase": "Menisco  lateral de morfologia e contornos conservados, apresentando pequenos focos de hipersinal no seu interior, sem extensão paa as superfícies articulares, compatíveis com alterações degenerativas intrassubstanciais.",
     "conclusao": "Alterações degenerativas intrassubstanciais do menisco lateral."
   },
   {
     "numero": 4,
     "codigo": "4c",
-    "resumo": "Fissura no Menisco L",
+    "resumo": "Fissura Oblíqua (L)",
+    "tipo": "substituicao",
     "frase": "Traço de hipersinal no corno posterior anterior do menisco lateral estendendo-se para a superfície articular inferior sugestiva de fissura.",
     "conclusao": "Fissura oblíqua do menisco lateral."
   },
   {
     "numero": 4,
     "codigo": "4d",
-    "resumo": "Ruptura em Alça de Balde L",
-    "frase": "Ruptura longitudinal do menisco  lateral com fragmento deslocado de aspecto em ¨alça de balde¨, notando-se desvio do fragmento para a região intercondileana."
+    "resumo": "Rup. Alça de Balde (L)",
+    "tipo": "substituicao",
+    "frase": "Ruptura longitudinal do menisco lateral com fragmento deslocado de aspecto em ¨alça de balde¨, notando-se desvio do fragmento para a região intercondileana.",
+    "conclusao": "Ruptura em ¨alça de balde¨ do menisco lateral."
   },
   {
     "numero": 4,
     "codigo": "4e",
     "resumo": "Ruptura Radial",
-    "frase": "Ruptura radial acometendo o corno posterior do menisco lateral."
+    "tipo": "substituicao",
+    "frase": "Ruptura radial acometendo o corno posterior do menisco lateral.",
+    "conclusao": "Ruptura radial acometendo o corno posterior do menisco lateral."
   },
   {
     "numero": 4,
     "codigo": "4f",
-    "resumo": "Ruptura Complexa com Extrusão",
-    "frase": "Ruptura complexa do menisco lateral acometendo o corno posterior e corpo com extrusão meniscal."
+    "resumo": "Rup.Complexa com Extrusão",
+    "tipo": "substituicao",
+    "frase": "Ruptura complexa do menisco lateral acometendo o corno posterior e corpo com extrusão meniscal.",
+    "conclusao": "Ruptura complexa do menisco lateral."
   },
   {
     "numero": 4,
     "codigo": "4g",
-    "resumo": "Ruptura com Redução de Volume",
-    "frase": "Ruptura complexa do menisco lateral acometendo o corno posterior e corpo com acentuada redução de volume."
+    "resumo": "Rup. CX Redução de Volume",
+    "tipo": "substituicao",
+    "frase": "Ruptura complexa do menisco lateral acometendo o corno posterior e corpo com acentuada redução de volume.",
+    "conclusao": "Ruptura complexa do menisco lateral,"
   },
   {
     "numero": 4,
     "codigo": "4h",
-    "resumo": "Alterações Pós-operatórias",
-    "frase": "Redução de volume do corno posterior anterior e corpo do menisco lateral sugestiva de alterações pós-operatórias."
+    "resumo": "Alt. Pós-operatórias",
+    "tipo": "substituicao",
+    "frase": "Redução de volume do corno posterior anterior e corpo do menisco lateral sugestiva de alterações pós-operatórias.",
+    "conclusao": "Redução de volume do menisco lateral (PO?)."
   },
   {
     "numero": 5,
     "codigo": "5a",
-    "resumo": "Menisco Medial Normal",
-    "frase": "Menisco medial de morfologia, contornos e intensidade de sinal habituais."
+    "resumo": "Menisco Discoide",
+    "tipo": "substituicao",
+    "frase": "Menisco medial com morfologia discoide, apresentando contornos e intensidade de sinal habituais.",
+    "conclusao": ""
   },
   {
     "numero": 5,
     "codigo": "5b",
-    "resumo": "Alterações Degenerativas MM",
-    "frase": "Menisco medial de morfologia e contornos conservados, apresentando pequenos focos de hipersinal no seu interior, sem extensão para as superfícies articulares, compatíveis com alterações degenerativas intrassubstanciais."
+    "resumo": "ADG Intrassubstancial (M)",
+    "tipo": "substituicao",
+    "frase": "Menisco medial de morfologia e contornos conservados, apresentando pequenos focos de hipersinal no seu interior, sem extensão para as superfícies articulares, compatíveis com alterações degenerativas intrassubstanciais.",
+    "conclusao": "Alterações degenerativas intrassubstanciais do menisco medial."
   },
   {
     "numero": 5,
     "codigo": "5c",
-    "resumo": "Fissura no Menisco M",
-    "frase": "Traço de hipersinal no corno posterior do menisco medial estendendo-se para a superfície articular inferior sugestiva de fissura."
+    "resumo": "Fissura Oblíqua (M)",
+    "tipo": "substituicao",
+    "frase": "Traço de hipersinal no corno posterior do menisco medial estendendo-se para a superfície articular inferior sugestiva de fissura.",
+    "conclusao": "Fissura oblíqua do menisco medial."
   },
   {
     "numero": 5,
     "codigo": "5d",
     "resumo": "Ruptura em Alça de Balde",
-    "frase": "Ruptura longitudinal do menisco medial com fragmento deslocado de aspecto em ¨alça de balde¨, notando-se desvio do fragmento para a região intercondileana."
+    "tipo": "substituicao",
+    "frase": "Ruptura longitudinal do menisco medial com fragmento deslocado de aspecto em ¨alça de balde¨, notando-se desvio do fragmento para a região intercondileana.",
+    "conclusao": ""
   },
   {
     "numero": 5,
     "codigo": "5e",
     "resumo": "Ruptura Radial MM",
-    "frase": "Ruptura radial acometendo o corno posterior do menisco medial."
+    "tipo": "substituicao",
+    "frase": "Ruptura radial acometendo o corno posterior do menisco medial.",
+    "conclusao": ""
   },
   {
     "numero": 5,
     "codigo": "5f",
     "resumo": "Ruptura Complexa com Extrusão",
-    "frase": "Ruptura complexa do menisco medial acometendo o corno posterior e corpo com extrusão meniscal."
+    "tipo": "substituicao",
+    "frase": "Ruptura complexa do menisco medial acometendo o corno posterior e corpo com extrusão meniscal.",
+    "conclusao": ""
   },
   {
     "numero": 5,
     "codigo": "5g",
     "resumo": "Ruptura com Redução de Volume",
-    "frase": "Ruptura complexa do menisco medial acometendo o corno posterior anterior e corpo com acentuada redução de volume."
+    "tipo": "substituicao",
+    "frase": "Ruptura complexa do menisco medial acometendo o corno posterior anterior e corpo com acentuada redução de volume.",
+    "conclusao": ""
   },
   {
     "numero": 5,
     "codigo": "5h",
     "resumo": "Alterações Pós-operatórias",
-    "frase": "Redução de volume do corno posterior anterior e corpo do menisco medial sugestiva de alterações pós-operatórias."
+    "tipo": "substituicao",
+    "frase": "Redução de volume do corno posterior anterior e corpo do menisco medial sugestiva de alterações pós-operatórias.",
+    "conclusao": ""
   },
-
   {
     "numero": 6,
     "codigo": "6a",
     "resumo": "Ruptura Total LCA",
-    "frase": "Ligamento cruzado anterior apresentando descontinuidade de suas fibras compatível com ruptura total."
+    "tipo": "substituicao",
+    "frase": "Ligamento cruzado anterior apresentando descontinuidade de suas fibras compatível com ruptura total.",
+    "conclusao": ""
   },
   {
     "numero": 6,
     "codigo": "6b",
     "resumo": "Ruptura Parcial LCA",
-    "frase": "Ligamento cruzado anterior com alteração de sinal, mantendo a orientação das suas fibras, podendo corresponder a ruptura parcial do mesmo."
+    "tipo": "substituicao",
+    "frase": "Ligamento cruzado anterior com alteração de sinal, mantendo a orientação das suas fibras, podendo corresponder a ruptura parcial do mesmo.",
+    "conclusao": ""
   },
   {
     "numero": 6,
     "codigo": "6c",
-    "tipo":"complementar",
     "resumo": "Contusão Femorotibial",
-    "frase": "Alteração de sinal com padrão de edema na região femorotibial lateral compatível com contusões."
+    "tipo": "complementar",
+    "frase": "Alteração de sinal com padrão de edema na região femorotibial lateral compatível com contusões.",
+    "conclusao": ""
   },
   {
     "numero": 6,
     "codigo": "6d",
     "resumo": "Translação Anterior da Tíbia",
-    "tipo":"complementar",
-    "frase": "Translação anterior da tíbia de cerca de XXX mm (VN até 5-7mm no côndilo femoral lateral)."
+    "tipo": "complementar",
+    "frase": "Translação anterior da tíbia de cerca de XXX mm (VN até 5-7mm no côndilo femoral lateral).",
+    "conclusao": ""
   },
   {
     "numero": 6,
     "codigo": "6e",
     "resumo": "Degeneração Mucinóide",
-    "frase": "Alteração da intensidade de sinal e aumento da espessura do ligamento cruzado anterior, sem sinais de descontinuidade de suas fibras podendo corresponder degeneração mucinóide."
+    "tipo": "substituicao",
+    "frase": "Alteração da intensidade de sinal e aumento da espessura do ligamento cruzado anterior, sem sinais de descontinuidade de suas fibras podendo corresponder degeneração mucinóide.",
+    "conclusao": ""
   },
   {
     "numero": 7,
     "codigo": "7a",
     "resumo": "LCP + LCM Normais",
-    "frase": "Ligamentos cruzado posterior e colateral medial de espessura e intensidade de sinal habituais."
+    "tipo": "substituicao",
+    "frase": "Ligamentos cruzado posterior e colateral medial de espessura e intensidade de sinal habituais.",
+    "conclusao": ""
   },
   {
     "numero": 7,
     "codigo": "7b",
     "resumo": "LCP + LCL Normais",
-    "frase": "Ligamentos cruzado posterior e colateral lateral de espessura e intensidade de sinal habituais."
+    "tipo": "substituicao",
+    "frase": "Ligamentos cruzado posterior e colateral lateral de espessura e intensidade de sinal habituais.",
+    "conclusao": ""
   },
   {
     "numero": 7,
     "codigo": "7c",
     "resumo": "Lesão Crônica LCM",
-    "frase": "Espessamento do ligamento colateral medial sem evidencias de alteração de sinal (sem edema) nas suas fibras, sugerindo lesão antiga/crônica."
+    "tipo": "substituicao",
+    "frase": "Espessamento do ligamento colateral medial sem evidencias de alteração de sinal (sem edema) nas suas fibras, sugerindo lesão antiga/crônica.",
+    "conclusao": ""
   },
   {
     "numero": 7,
     "codigo": "7d",
     "resumo": "Estiramento LCM",
-    "frase": "Ligamento colateral medial apresenta alteração de sinal das suas fibras e ao redor, sugerindo estiramento (lesão grau I)."
+    "tipo": "substituicao",
+    "frase": "Ligamento colateral medial apresenta alteração de sinal das suas fibras e ao redor, sugerindo estiramento (lesão grau I).",
+    "conclusao": ""
   },
   {
     "numero": 7,
     "codigo": "7e",
     "resumo": "Ruptura Parcial LCM",
-    "frase": "Ligamento colateral medial apresenta-se espessado, de contornos mal definidos e com alteração de sinal de suas fibras, compatível com ruptura parcial."
+    "tipo": "substituicao",
+    "frase": "Ligamento colateral medial apresenta-se espessado, de contornos mal definidos e com alteração de sinal de suas fibras, compatível com ruptura parcial.",
+    "conclusao": ""
   },
   {
     "numero": 7,
     "codigo": "7f",
     "resumo": "Ruptura Total LCM",
-    "frase": "Ligamento colateral medial apresenta alteração de sinal de suas fibras e ao redor, notando-se descontinuidade das suas fibras no seu terço proximal médio distal sugestivo de ruptura total."
+    "tipo": "substituicao",
+    "frase": "Ligamento colateral medial apresenta alteração de sinal de suas fibras e ao redor, notando-se descontinuidade das suas fibras no seu terço proximal médio distal sugestivo de ruptura total.",
+    "conclusao": ""
   },
   {
     "numero": 8,
     "codigo": "8a",
     "resumo": "Ruptura Total LCP",
-    "frase": "Ligamento cruzado posterior apresentando descontinuidade de suas fibras compatível com ruptura total."
+    "tipo": "substituicao",
+    "frase": "Ligamento cruzado posterior apresentando descontinuidade de suas fibras compatível com ruptura total.",
+    "conclusao": ""
   },
   {
     "numero": 9,
     "codigo": "9a",
     "resumo": "Tendinopatia Poplítea",
-    "frase": "Tendão poplíteo apresentando alteração de sinal e espessamento associado a distensão líquida da sua bainha tendínea, compatível com tendinopatia."
+    "tipo": "substituicao",
+    "frase": "Tendão poplíteo apresentando alteração de sinal e espessamento associado a distensão líquida da sua bainha tendínea, compatível com tendinopatia.",
+    "conclusao": ""
   },
   {
     "numero": 10,
     "codigo": "10a",
     "resumo": "Tendinopatia Pata de Ganso",
-    "frase": "Alteração da intensidade de sinal com padrão de edema junto das fibras dos tendões da pata de ganso."
+    "tipo": "substituicao",
+    "frase": "Alteração da intensidade de sinal com padrão de edema junto das fibras dos tendões da pata de ganso.",
+    "conclusao": ""
   },
   {
     "numero": 10,
     "codigo": "10b",
     "resumo": "Bursite Anserina",
-    "tipo":"complementar",
-    "frase": "Distensão líquida da bursa dos tendões da pata anserina."
+    "tipo": "complementar",
+    "frase": "Distensão líquida da bursa dos tendões da pata anserina.",
+    "conclusao": ""
   },
   {
     "numero": 11,
     "codigo": "11a",
     "resumo": "Bursite Infrapatelar",
-    "frase": "Alteração de sinal de partes moles na região anterior ao tendão patelar (bursite infrapatelar superficial)."
+    "tipo": "substituicao",
+    "frase": "Alteração de sinal de partes moles na região anterior ao tendão patelar (bursite infrapatelar superficial).",
+    "conclusao": ""
   },
   {
     "numero": 12,
     "codigo": "12a",
     "resumo": "Entesófito Quadríceps",
-    "frase": "Tendões do quadríceps e patelar de aspecto normal, notando-se entesófito na inserção do tendão do quadríceps."
+    "tipo": "substituicao",
+    "frase": "Tendões do quadríceps e patelar de aspecto normal, notando-se entesófito na inserção do tendão do quadríceps.",
+    "conclusao": ""
   },
   {
     "numero": 12,
     "codigo": "12b",
     "resumo": "Tendinopatia do Quadríceps",
-    "frase": "O tendão do quadríceps apresenta aumento da espessura e com alteração de sinal, compatível com tendinopatia, sem sinais de ruptura."
+    "tipo": "substituicao",
+    "frase": "O tendão do quadríceps apresenta aumento da espessura e com alteração de sinal, compatível com tendinopatia, sem sinais de ruptura.",
+    "conclusao": ""
   },
   {
     "numero": 12,
     "codigo": "12c",
     "resumo": "Tendinopatia Patelar",
-    "frase": "O tendão patelar apresenta aumento da espessura e com alteração de sinal, compatível com tendinopatia, sem sinais de ruptura."
+    "tipo": "substituicao",
+    "frase": "O tendão patelar apresenta aumento da espessura e com alteração de sinal, compatível com tendinopatia, sem sinais de ruptura.",
+    "conclusao": ""
   },
   {
     "numero": 13,
     "codigo": "13a",
     "resumo": "Hoffite",
-    "frase": "Focos de alto sinal (edema) na gordura de Hoffa junto do polo inferior da patela, podendo estar relacionado a impacto extensor."
+    "tipo": "substituicao",
+    "frase": "Focos de alto sinal (edema) na gordura de Hoffa junto do polo inferior da patela, podendo estar relacionado a impacto extensor.",
+    "conclusao": ""
   },
   {
     "numero": 14,
     "codigo": "14a",
     "resumo": "Condropatia Patelar Leve",
-    "frase": "Cartilagem femoropatelar apresentando heterogeneidade do sinal, sem erosões."
+    "tipo": "substituicao",
+    "frase": "Cartilagem femoropatelar apresentando heterogeneidade do sinal, sem erosões.",
+    "conclusao": ""
   },
   {
     "numero": 14,
     "codigo": "14b",
     "resumo": "Condropatia Patelar Moderada",
-    "frase": "Cartilagem femoropatelar apresentando erosões acometendo menos de 50% da sua espessura."
+    "tipo": "substituicao",
+    "frase": "Cartilagem femoropatelar apresentando erosões acometendo menos de 50% da sua espessura.",
+    "conclusao": ""
   },
   {
     "numero": 14,
     "codigo": "14c",
     "resumo": "Condropatia Patelar Acentuada",
-    "frase": "Cartilagem femoropatelar apresentando erosões acometendo mais de 50% da sua espessura."
+    "tipo": "substituicao",
+    "frase": "Cartilagem femoropatelar apresentando erosões acometendo mais de 50% da sua espessura.",
+    "conclusao": ""
   },
   {
     "numero": 14,
     "codigo": "14d",
     "resumo": "Condropatia Patelar Profunda",
-    "frase": "Cartilagem femoropatelar apresentando erosão profunda na cartilagem patelar troclear, com exposição da cortical óssea. A lesão se estende por cerca de XXX cm."
+    "tipo": "substituicao",
+    "frase": "Cartilagem femoropatelar apresentando erosão profunda na cartilagem patelar troclear, com exposição da cortical óssea. A lesão se estende por cerca de XXX cm.",
+    "conclusao": ""
   },
   {
     "numero": 15,
     "codigo": "15a",
     "resumo": "Condropatia Femorotibial Medial Leve",
-    "frase": "Cartilagem femorotibial medial com heterogeneidade do sinal, sem erosões."
+    "tipo": "substituicao",
+    "frase": "Cartilagem femorotibial medial com heterogeneidade do sinal, sem erosões.",
+    "conclusao": ""
   },
   {
     "numero": 15,
     "codigo": "15b",
     "resumo": "Condropatia Femorotibial Medial Moderada",
-    "frase": "Cartilagem femorotibial medial com erosões acometendo menos de 50% da sua espessura."
+    "tipo": "substituicao",
+    "frase": "Cartilagem femorotibial medial com erosões acometendo menos de 50% da sua espessura.",
+    "conclusao": ""
   },
   {
     "numero": 15,
     "codigo": "15c",
     "resumo": "Condropatia Femorotibial Medial Acentuada",
-    "frase": "Cartilagem femorotibial medial com erosões acometendo mais de 50% da sua espessura."
+    "tipo": "substituicao",
+    "frase": "Cartilagem femorotibial medial com erosões acometendo mais de 50% da sua espessura.",
+    "conclusao": ""
   },
   {
     "numero": 15,
     "codigo": "15d",
     "resumo": "Condropatia Femorotibial Medial Profunda",
-    "frase": "Cartilagem femorotibial medial com erosão profunda na zona de carga do côndilo femoral, com exposição da cortical óssea. A lesão se estende por cerca de XXX cm."
+    "tipo": "substituicao",
+    "frase": "Cartilagem femorotibial medial com erosão profunda na zona de carga do côndilo femoral, com exposição da cortical óssea. A lesão se estende por cerca de XXX cm.",
+    "conclusao": ""
   },
   {
     "numero": 16,
     "codigo": "16a",
     "resumo": "Condropatia Femorotibial Lateral Leve",
-    "frase": "Cartilagem femorotibial lateral com heterogeneidade do sinal, sem erosões."
+    "tipo": "substituicao",
+    "frase": "Cartilagem femorotibial lateral com heterogeneidade do sinal, sem erosões.",
+    "conclusao": ""
   },
   {
     "numero": 16,
     "codigo": "16b",
     "resumo": "Condropatia Femorotibial Lateral Moderada",
-    "frase": "Cartilagem femorotibial lateral com erosões acometendo menos de 50% da sua espessura."
+    "tipo": "substituicao",
+    "frase": "Cartilagem femorotibial lateral com erosões acometendo menos de 50% da sua espessura.",
+    "conclusao": ""
   },
   {
     "numero": 16,
     "codigo": "16c",
     "resumo": "Condropatia Femorotibial Lateral Acentuada",
-    "frase": "Cartilagem femorotibial lateral com erosões acometendo mais de 50% da sua espessura."
+    "tipo": "substituicao",
+    "frase": "Cartilagem femorotibial lateral com erosões acometendo mais de 50% da sua espessura.",
+    "conclusao": ""
   },
   {
     "numero": 16,
     "codigo": "16d",
     "resumo": "Condropatia Femorotibial Lateral Profunda",
-    "frase": "Cartilagem femorotibial lateral com erosão profunda na zona de carga do côndilo femoral, com exposição da cortical óssea. A lesão se estende por cerca de XXX cm."
+    "tipo": "substituicao",
+    "frase": "Cartilagem femorotibial lateral com erosão profunda na zona de carga do côndilo femoral, com exposição da cortical óssea. A lesão se estende por cerca de XXX cm.",
+    "conclusao": ""
   },
   {
     "numero": 17,
     "codigo": "17a",
     "resumo": "Patela Alta",
-    "frase": "Patela alta à extensão (índice de Insall-Salvati > 1,5)."
+    "tipo": "substituicao",
+    "frase": "Patela alta à extensão (índice de Insall-Salvati > 1,5).",
+    "conclusao": ""
   },
   {
     "numero": 17,
     "codigo": "17b",
     "resumo": "Inclinação Lateral Patelar",
-    "frase": "Inclinação lateral patelar a extensão (ângulo de inclinação >20º)."
+    "tipo": "substituicao",
+    "frase": "Inclinação lateral patelar a extensão (ângulo de inclinação >20º).",
+    "conclusao": ""
   },
   {
     "numero": 17,
     "codigo": "17c",
     "resumo": "Displasia Troclear",
-    "frase": "Aumento do ângulo do sulco da tróclea (ângulo do sulco >165º). Redução da profundidade troclear (<3mm)."
+    "tipo": "substituicao",
+    "frase": "Aumento do ângulo do sulco da tróclea (ângulo do sulco >165º). Redução da profundidade troclear (<3mm).",
+    "conclusao": ""
   },
   {
     "numero": 18,
     "codigo": "18a",
     "resumo": "Varizes na Coxa/Perna",
-    "frase": "Presença de dilatações varicosas de veias superficiais da face medial da coxa / perna (varizes)."
+    "tipo": "substituicao",
+    "frase": "Presença de dilatações varicosas de veias superficiais da face medial da coxa / perna (varizes).",
+    "conclusao": ""
   },
   {
     "numero": 99,
     "codigo": "99a",
     "resumo": "Achado Cicatricial",
-    "frase": "Presença de tecido cicatricial junto ao ligamento patelofemoral medial."
+    "tipo": "substituicao",
+    "frase": "Presença de tecido cicatricial junto ao ligamento patelofemoral medial.",
+    "conclusao": ""
   }
 ]
