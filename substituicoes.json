@@ -30,7 +30,8 @@
     "numero": 3,
     "codigo": "3a",
     "resumo": "Cisto de Baker",
-    "frase": "Presença de líquido na bursa gastrocnêmio semimembranoso (cisto de Baker)."
+    "frase": "Presença de líquido na bursa gastrocnêmio semimembranoso (cisto de Baker).",
+    "conclusao": "Cisto de Baker."
   },
   {
     "numero": 3,
@@ -41,9 +42,10 @@
   },
   {
     "numero": 4,
-    "codigo": "4a",
-    "resumo": "Menisco Lateral Normal",
-    "frase": "Menisco lateral de morfologia, contornos e intensidade de sinal habituais."
+    "codigo": "4x",
+    "resumo": "Matematica menisco",
+    "tipo": "matematica",
+    "script": "scripts/calculo_menisco.js"
   },
   {
     "numero": 4,
@@ -56,7 +58,8 @@
     "numero": 4,
     "codigo": "4c",
     "resumo": "Fissura no Menisco L",
-    "frase": "Traço de hipersinal no corno posterior anterior do menisco lateral estendendo-se para a superfície articular inferior sugestiva de fissura."
+    "frase": "Traço de hipersinal no corno posterior anterior do menisco lateral estendendo-se para a superfície articular inferior sugestiva de fissura.",
+    "conclusao": "Fissura oblíqua do menisco lateral."
   },
   {
     "numero": 4,

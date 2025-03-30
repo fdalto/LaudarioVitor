@@ -36,7 +36,7 @@
     .substituicao {
       margin-bottom: 10px;
     }
-    .summary-line, .phrase-line, .conclusion-line {
+    .summary-line, .phrase-line, .conclusion-line, .type-line {
       margin-bottom: 5px;
     }
     .summary-line span {
@@ -121,6 +121,9 @@
           subDiv.className = 'substituicao';
           subDiv.dataset.codigo = sub.codigo;
           
+          // Define o tipo, considerando "substituicao" caso não esteja definido
+          var tipo = sub.tipo || "substituicao";
+          
           // Linha com código e resumo (campo editável)
           var summaryLine = document.createElement('div');
           summaryLine.className = 'summary-line';
@@ -133,23 +136,78 @@
           summaryLine.appendChild(resumoInput);
           subDiv.appendChild(summaryLine);
           
-          // Linha com a frase alterada (editável)
+          // Linha com a frase alterada ou script (campo editável)
           var phraseLine = document.createElement('div');
           phraseLine.className = 'phrase-line';
           var fraseInput = document.createElement('input');
           fraseInput.type = 'text';
-          fraseInput.value = sub.frase || '';
+          if (tipo === "matematica") {
+            // Se for do tipo matemática, o campo representa o script
+            fraseInput.value = sub.script || '';
+          } else {
+            fraseInput.value = sub.frase || '';
+          }
           phraseLine.appendChild(fraseInput);
           subDiv.appendChild(phraseLine);
           
-          // Linha com a conclusão (editável, sempre criada)
+          // Linha com a conclusão (campo editável)
           var conclLine = document.createElement('div');
           conclLine.className = 'conclusion-line';
           var conclInput = document.createElement('input');
           conclInput.type = 'text';
-          conclInput.value = sub.conclusao || '';
+          if (tipo === "matematica") {
+            conclInput.value = "";
+          } else {
+            conclInput.value = sub.conclusao || '';
+          }
           conclLine.appendChild(conclInput);
           subDiv.appendChild(conclLine);
+          
+          // Linha com o seletor de tipo (dropdown)
+          var typeLine = document.createElement('div');
+          typeLine.className = 'type-line';
+          var typeSelect = document.createElement('select');
+          var option1 = document.createElement('option');
+          option1.value = "substituicao";
+          option1.textContent = "Substituição";
+          typeSelect.appendChild(option1);
+          var option2 = document.createElement('option');
+          option2.value = "complementar";
+          option2.textContent = "Complementar";
+          typeSelect.appendChild(option2);
+          var option3 = document.createElement('option');
+          option3.value = "matematica";
+          option3.textContent = "Matemática";
+          typeSelect.appendChild(option3);
+          typeSelect.value = tipo;
+          typeLine.appendChild(typeSelect);
+          subDiv.appendChild(typeLine);
+          
+          // Define o estado inicial conforme o tipo
+          if (typeSelect.value === "matematica") {
+              fraseInput.placeholder = "Nome do Script";
+              conclInput.disabled = true;
+              conclInput.value = "";
+              conclInput.placeholder = "Desabilitado para Matemática";
+          } else {
+              fraseInput.placeholder = "Frase alterada";
+              conclInput.disabled = false;
+              conclInput.placeholder = "";
+          }
+          
+          // Atualiza os campos se o usuário mudar o tipo
+          typeSelect.addEventListener('change', function() {
+              if (typeSelect.value === "matematica") {
+                  fraseInput.placeholder = "Nome do Script";
+                  conclInput.disabled = true;
+                  conclInput.value = "";
+                  conclInput.placeholder = "Desabilitado para Matemática";
+              } else {
+                  fraseInput.placeholder = "Frase alterada";
+                  conclInput.disabled = false;
+                  conclInput.placeholder = "";
+              }
+          });
           
           subsContainer.appendChild(subDiv);
         });
@@ -186,14 +244,33 @@
     function saveSubstituicoes() {
       var substituicoesArray = [];
       document.querySelectorAll('.substituicao').forEach(function(sub) {
-        // Obtém o número do bloco pai (preservado conforme o arquivo original)
         var parentBlock = sub.closest('.block');
         var numero = Number(parentBlock.dataset.number);
         var codigo = sub.dataset.codigo;
         var resumo = sub.querySelector('.summary-line input').value;
-        var frase = sub.querySelector('.phrase-line input').value;
-        var conclusao = sub.querySelector('.conclusion-line input').value;
-        substituicoesArray.push({ numero: numero, codigo: codigo, resumo: resumo, frase: frase, conclusao: conclusao });
+        var typeSelect = sub.querySelector('.type-line select');
+        // Se o tipo não estiver definido, considera "substituicao"
+        var tipo = typeSelect ? typeSelect.value : "substituicao";
+        var phraseInput = sub.querySelector('.phrase-line input');
+        var conclInput = sub.querySelector('.conclusion-line input');
+        if (tipo === "matematica") {
+          substituicoesArray.push({ 
+            numero: numero, 
+            codigo: codigo, 
+            resumo: resumo, 
+            tipo: tipo,
+            script: phraseInput.value 
+          });
+        } else {
+          substituicoesArray.push({ 
+            numero: numero, 
+            codigo: codigo, 
+            resumo: resumo, 
+            tipo: tipo,
+            frase: phraseInput.value, 
+            conclusao: conclInput.value 
+          });
+        }
       });
       var dataStr = JSON.stringify(substituicoesArray, null, 2);
       var blob = new Blob([dataStr], { type: "application/json" });

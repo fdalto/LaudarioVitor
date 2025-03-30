@@ -15,9 +15,9 @@ Promise.all([
   });
 
   substituicoesArray.forEach((item) => {
-    const { numero, codigo, resumo, frase, conclusao, tipo } = item;
+    const { numero, codigo, resumo, frase, conclusao, tipo, script } = item;
     if (!substituicoes[numero]) substituicoes[numero] = [];
-    substituicoes[numero].push({ codigo, frase, conclusao, tipo });
+    substituicoes[numero].push({ codigo, frase, conclusao, tipo, script });
     rotulosAlternativos[codigo] = resumo;
   });
 
@@ -103,7 +103,7 @@ function montarMenu(frasesOriginais, frasesOriginaisInfo, substituicoes, rotulos
 
     if (substituicoes[numero]) {
       substituicoes[numero].forEach((item) => {
-        const { frase, conclusao, tipo = 'substituicao', codigo } = item;
+        const { frase, conclusao, tipo = 'substituicao', codigo, script } = item;
         const resumo = rotulosAlternativos[codigo] || frase.substring(0, 40) + "...";
 
         if (tipo === 'complementar') {
@@ -130,6 +130,22 @@ function montarMenu(frasesOriginais, frasesOriginaisInfo, substituicoes, rotulos
           label.appendChild(checkbox);
           label.appendChild(document.createTextNode(resumo));
           grupo.appendChild(label);
+        } else if (tipo === 'matematica') {
+          const label = document.createElement('label');
+          label.style.display = 'block';
+          label.innerText = resumo;
+          grupo.appendChild(label);
+
+          const p = document.querySelector(`p[data-linha='${numero}']`);
+          const novaLinha = document.createElement('p');
+          novaLinha.id = `mat-${codigo}`;
+          p.insertAdjacentElement('afterend', novaLinha);
+
+          if (script) {
+            const s = document.createElement('script');
+            s.src = script;
+            document.body.appendChild(s);
+          }
         } else {
           const botao = document.createElement('button');
           botao.className = 'frase';
