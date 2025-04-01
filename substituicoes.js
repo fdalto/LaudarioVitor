@@ -60,6 +60,9 @@ function gerarCampoRelatorio(frasesOriginaisArray) {
     p.dataset.linha = numero;
     p.innerText = frase;
     campo.appendChild(p);
+    const espaco = document.createElement('p');
+    espaco.innerHTML = '&nbsp;'; // espaço visual sem conteúdo
+    campo.appendChild(espaco);
   });
 
   const blocoConclusaoTitulo = document.createElement('p');

@@ -23,10 +23,10 @@ body {
     height: 90%;
     overflow-y: auto;
     background: white;
-    padding: 10px;
+    padding: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-    margin: 8px 0;
+    margin: 5px 0;
     font-size: 16px;
   }
   
@@ -90,4 +90,9 @@ body {
   width: fit-content;
   align-self: center;
   margin: 8px;
+}
+
+#relatorio p {
+  margin-top: 6px;
+  margin-bottom: 6px;
 }
