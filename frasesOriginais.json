@@ -86,12 +86,12 @@
   },
   {
     "numero": 18,
-    "frase": "- Vasos poplíteos e musculatura sem achados singificativos.",
+    "frase": "- Vasos poplíteos e musculatura sem achados significativos.",
     "rotulo": "Musculatura / Vasos"
   },
   {
     "numero": 99,
-    "frase": "- Frase extra a definir.",
+    "frase": "Achado Adicional:        ", 
     "rotulo": "Achado Adicional"
   }
 ]

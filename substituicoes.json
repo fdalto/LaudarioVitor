@@ -60,7 +60,7 @@
     "codigo": "4b",
     "resumo": "ADG Intrassubstancial",
     "tipo": "substituicao",
-    "frase": "Menisco  lateral de morfologia e contornos conservados, apresentando pequenos focos de hipersinal no seu interior, sem extensão paa as superfícies articulares, compatíveis com alterações degenerativas intrassubstanciais.",
+    "frase": "Menisco lateral de morfologia e contornos conservados, apresentando pequenos focos de hipersinal no seu interior, sem extensão para as superfícies articulares, compatíveis com alterações degenerativas intrassubstanciais.",
     "conclusao": "Alterações degenerativas intrassubstanciais do menisco lateral."
   },
   {
@@ -68,7 +68,7 @@
     "codigo": "4c",
     "resumo": "Fissura Oblíqua (L)",
     "tipo": "substituicao",
-    "frase": "Traço de hipersinal no corno posterior anterior do menisco lateral estendendo-se para a superfície articular inferior sugestiva de fissura.",
+    "frase": "Traço de hipersinal no corno posterior do menisco lateral estendendo-se para a superfície articular inferior sugestiva de fissura.",
     "conclusao": "Fissura oblíqua do menisco lateral."
   },
   {
@@ -101,7 +101,7 @@
     "resumo": "Rup. CX Redução de Volume",
     "tipo": "substituicao",
     "frase": "Ruptura complexa do menisco lateral acometendo o corno posterior e corpo com acentuada redução de volume.",
-    "conclusao": "Ruptura complexa do menisco lateral,"
+    "conclusao": "Ruptura complexa do menisco lateral."
   },
   {
     "numero": 4,
@@ -141,7 +141,7 @@
     "resumo": "Ruptura em Alça de Balde",
     "tipo": "substituicao",
     "frase": "Ruptura longitudinal do menisco medial com fragmento deslocado de aspecto em ¨alça de balde¨, notando-se desvio do fragmento para a região intercondileana.",
-    "conclusao": ""
+    "conclusao": "Ruptura em ¨alça de balde¨ do menisco medial."
   },
   {
     "numero": 5,
@@ -149,7 +149,7 @@
     "resumo": "Ruptura Radial MM",
     "tipo": "substituicao",
     "frase": "Ruptura radial acometendo o corno posterior do menisco medial.",
-    "conclusao": ""
+    "conclusao": "Ruptura radial acometendo o corno posterior do menisco medial."
   },
   {
     "numero": 5,
@@ -157,7 +157,7 @@
     "resumo": "Ruptura Complexa com Extrusão",
     "tipo": "substituicao",
     "frase": "Ruptura complexa do menisco medial acometendo o corno posterior e corpo com extrusão meniscal.",
-    "conclusao": ""
+    "conclusao": "Ruptura complexa do menisco medial."
   },
   {
     "numero": 5,
@@ -165,7 +165,7 @@
     "resumo": "Ruptura com Redução de Volume",
     "tipo": "substituicao",
     "frase": "Ruptura complexa do menisco medial acometendo o corno posterior anterior e corpo com acentuada redução de volume.",
-    "conclusao": ""
+    "conclusao": "Ruptura complexa do menisco medial."
   },
   {
     "numero": 5,
@@ -173,7 +173,7 @@
     "resumo": "Alterações Pós-operatórias",
     "tipo": "substituicao",
     "frase": "Redução de volume do corno posterior anterior e corpo do menisco medial sugestiva de alterações pós-operatórias.",
-    "conclusao": ""
+    "conclusao": "Redução de volume do menisco medial (PO?)."
   },
   {
     "numero": 6,
@@ -181,7 +181,7 @@
     "resumo": "Ruptura Total LCA",
     "tipo": "substituicao",
     "frase": "Ligamento cruzado anterior apresentando descontinuidade de suas fibras compatível com ruptura total.",
-    "conclusao": ""
+    "conclusao": "Ruptura total do ligamento cruzado anterior."
   },
   {
     "numero": 6,
@@ -189,7 +189,7 @@
     "resumo": "Ruptura Parcial LCA",
     "tipo": "substituicao",
     "frase": "Ligamento cruzado anterior com alteração de sinal, mantendo a orientação das suas fibras, podendo corresponder a ruptura parcial do mesmo.",
-    "conclusao": ""
+    "conclusao": "Ruptura parcial do ligamento cruzado anterior."
   },
   {
     "numero": 6,
@@ -213,22 +213,22 @@
     "resumo": "Degeneração Mucinóide",
     "tipo": "substituicao",
     "frase": "Alteração da intensidade de sinal e aumento da espessura do ligamento cruzado anterior, sem sinais de descontinuidade de suas fibras podendo corresponder degeneração mucinóide.",
-    "conclusao": ""
+    "conclusao": "Degeneração mucinóide do ligamento cruzado anterior."
   },
   {
     "numero": 7,
     "codigo": "7a",
-    "resumo": "LCP + LCM Normais",
-    "tipo": "substituicao",
-    "frase": "Ligamentos cruzado posterior e colateral medial de espessura e intensidade de sinal habituais.",
+    "resumo": "LCM Normal",
+    "tipo": "complementar",
+    "frase": "Ligamento colateral medial de espessura e intensidade de sinal habituais.",
     "conclusao": ""
   },
   {
     "numero": 7,
     "codigo": "7b",
-    "resumo": "LCP + LCL Normais",
-    "tipo": "substituicao",
-    "frase": "Ligamentos cruzado posterior e colateral lateral de espessura e intensidade de sinal habituais.",
+    "resumo": "LCL Normal",
+    "tipo": "complementar",
+    "frase": "Ligamento colateral lateral de espessura e intensidade de sinal habituais.",
     "conclusao": ""
   },
   {
@@ -237,7 +237,7 @@
     "resumo": "Lesão Crônica LCM",
     "tipo": "substituicao",
     "frase": "Espessamento do ligamento colateral medial sem evidencias de alteração de sinal (sem edema) nas suas fibras, sugerindo lesão antiga/crônica.",
-    "conclusao": ""
+    "conclusao": "Sinais de lesão crônica do ligamento colateral medial."
   },
   {
     "numero": 7,
@@ -245,7 +245,7 @@
     "resumo": "Estiramento LCM",
     "tipo": "substituicao",
     "frase": "Ligamento colateral medial apresenta alteração de sinal das suas fibras e ao redor, sugerindo estiramento (lesão grau I).",
-    "conclusao": ""
+    "conclusao": "Sinais de estiramento/sobrecarga do ligamento colateral medial."
   },
   {
     "numero": 7,
@@ -253,7 +253,7 @@
     "resumo": "Ruptura Parcial LCM",
     "tipo": "substituicao",
     "frase": "Ligamento colateral medial apresenta-se espessado, de contornos mal definidos e com alteração de sinal de suas fibras, compatível com ruptura parcial.",
-    "conclusao": ""
+    "conclusao": "Ruptura parcial do ligamento colateral medial."
   },
   {
     "numero": 7,
@@ -261,7 +261,7 @@
     "resumo": "Ruptura Total LCM",
     "tipo": "substituicao",
     "frase": "Ligamento colateral medial apresenta alteração de sinal de suas fibras e ao redor, notando-se descontinuidade das suas fibras no seu terço proximal médio distal sugestivo de ruptura total.",
-    "conclusao": ""
+    "conclusao": "Ruptura total do ligamento colateral medial."
   },
   {
     "numero": 8,
@@ -269,7 +269,7 @@
     "resumo": "Ruptura Total LCP",
     "tipo": "substituicao",
     "frase": "Ligamento cruzado posterior apresentando descontinuidade de suas fibras compatível com ruptura total.",
-    "conclusao": ""
+    "conclusao": "Ruptura total do ligamento cruzado posterior."
   },
   {
     "numero": 9,
@@ -277,7 +277,7 @@
     "resumo": "Tendinopatia Poplítea",
     "tipo": "substituicao",
     "frase": "Tendão poplíteo apresentando alteração de sinal e espessamento associado a distensão líquida da sua bainha tendínea, compatível com tendinopatia.",
-    "conclusao": ""
+    "conclusao": "Tendinopatia com tenossinovite do poplíteo."
   },
   {
     "numero": 10,
@@ -285,7 +285,7 @@
     "resumo": "Tendinopatia Pata de Ganso",
     "tipo": "substituicao",
     "frase": "Alteração da intensidade de sinal com padrão de edema junto das fibras dos tendões da pata de ganso.",
-    "conclusao": ""
+    "conclusao": "Tendinopatia da pata de ganso."
   },
   {
     "numero": 10,
@@ -301,7 +301,7 @@
     "resumo": "Bursite Infrapatelar",
     "tipo": "substituicao",
     "frase": "Alteração de sinal de partes moles na região anterior ao tendão patelar (bursite infrapatelar superficial).",
-    "conclusao": ""
+    "conclusao": "Sinais de bursite infrapatelar superficial."
   },
   {
     "numero": 12,
@@ -316,16 +316,16 @@
     "codigo": "12b",
     "resumo": "Tendinopatia do Quadríceps",
     "tipo": "substituicao",
-    "frase": "O tendão do quadríceps apresenta aumento da espessura e com alteração de sinal, compatível com tendinopatia, sem sinais de ruptura.",
-    "conclusao": ""
+    "frase": "O tendão do quadríceps apresenta aumento da espessura e com alteração de sinal, compatível com tendinopatia, sem sinais de ruptura. O tendão patelar mostra-se de espessura e intensidade de sinal normais.",
+    "conclusao": "Tendinopatia do quadríceps."
   },
   {
     "numero": 12,
     "codigo": "12c",
     "resumo": "Tendinopatia Patelar",
     "tipo": "substituicao",
-    "frase": "O tendão patelar apresenta aumento da espessura e com alteração de sinal, compatível com tendinopatia, sem sinais de ruptura.",
-    "conclusao": ""
+    "frase": "O tendão patelar apresenta aumento da espessura e com alteração de sinal na sua origem, compatível com tendinopatia, sem sinais de ruptura. O tendão do quadríceps mostra-se de espessura e intensidade de sinal normais.",
+    "conclusao": "Tendinopatia patelar proximal, sem ruptura."
   },
   {
     "numero": 13,
@@ -333,7 +333,7 @@
     "resumo": "Hoffite",
     "tipo": "substituicao",
     "frase": "Focos de alto sinal (edema) na gordura de Hoffa junto do polo inferior da patela, podendo estar relacionado a impacto extensor.",
-    "conclusao": ""
+    "conclusao": "Edema na gordura de Hoffa, podendo estar relacionado a impacto extensor."
   },
   {
     "numero": 14,
@@ -341,7 +341,7 @@
     "resumo": "Condropatia Patelar Leve",
     "tipo": "substituicao",
     "frase": "Cartilagem femoropatelar apresentando heterogeneidade do sinal, sem erosões.",
-    "conclusao": ""
+    "conclusao": "Condropatia oatelar leve."
   },
   {
     "numero": 14,

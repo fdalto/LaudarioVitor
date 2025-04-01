@@ -20,15 +20,12 @@ body {
   }
   
   #campoRelatorio {
-    height: 100%;
+    height: 90%;
     overflow-y: auto;
     background: white;
     padding: 10px;
     border: 1px solid #ccc;
     box-sizing: border-box;
-  }
-  
-  p {
     margin: 8px 0;
     font-size: 16px;
   }
@@ -68,4 +65,29 @@ body {
     font-size: 16px;
     color: #333;
   }
+
+  #configTexto {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(240, 240, 240, 0.9);
+    border: 1px solid #ccc;
+    padding: 3px 6px;
+    border-radius: 8px;
+    font-size: 10px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+  #configTexto label {
+    margin-right: 2px;
+  }
   
+#startButton.ativo {
+    border: 2px solid rgb(230, 104, 26); /* Borda vermelha quando gravando */
+}
+
+#startButton {
+  width: fit-content;
+  align-self: center;
+  margin: 8px;
+}
