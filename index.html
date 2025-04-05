@@ -3,104 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ferramenta de Auxílio em Relatórios Médicos de RM</title>
-  <style>
-    body {
-      background-color: #ADD8E6; /* Azul claro */
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    /* Seção superior: duas imagens grandes */
-    .top-section {
-      height: 50vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .top-section img {
-      width: 80%;
-      height: auto;
-      margin: 10%;
-    }
-    /* Seção inferior: botões para seleção das articulações */
-    .bottom-section {
-      height: 50vh;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
-      padding: 20px;
-      background-color: #f0f0f0;
-    }
-    button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      transition: background-color 0.3s;
-    }
-    /* Botão ativo (atualmente apenas o Joelho) */
-    .ativo {
-      background-color: #4CAF50;
-      color: #fff;
-      cursor: pointer;
-    }
-    .ativo:hover {
-      background-color: #45a049;
-    }
-    /* Botões inativos: menos cor e com mais brilho */
-    .inativo {
-      background-color: #ccc;
-      color: #666;
-      filter: brightness(1.2);
-      cursor: not-allowed;
-    }
-  </style>
-</head>
+  <title>Ferramenta de Auxílio em Relatórios Médicos</title>
+  <link rel="stylesheet" href="landing/index_estilo.css">
+  </head>
 <body>
   <!-- Seção superior com duas imagens grandes -->
   <div class="top-section">
-    <!-- Link para o site de edição de relatórios -->
     <a href="editor_relatorios.html">
-      <img src="editar.png" alt="Editar Relatórios">
+      <img src="landing/editar.png" alt="Editar Relatórios">
     </a>
-    <!-- Link para o site que cria JSON -->
     <a href="json_creator.html">
-      <img src="json.png" alt="Criar JSON">
+      <img src="landing/json.png" alt="Criar JSON">
     </a>
   </div>
 
-  <!-- Seção inferior com botões das articulações -->
-  <div class="bottom-section">
-    <button class="inativo" disabled>Coluna Cervical</button>
-    <button class="inativo" disabled>Coluna Torácica</button>
-    <button class="inativo" disabled>Coluna Lombar</button>
-    <button class="inativo" disabled>Ombro</button>
-    <button class="inativo" disabled>Cotovelo</button>
-    <button class="inativo" disabled>Punho</button>
-    <button class="inativo" disabled>Braço</button>
-    <button class="inativo" disabled>Quadril</button>
-    <button class="inativo" disabled>Coxa</button>
-    <button class="inativo" disabled>Bacia</button>
-    <button class="ativo" id="joelho-btn">Joelho</button>
-    <button class="inativo" disabled>Perna</button>
-    <button class="inativo" disabled>Tornozelo</button>
-    <button class="inativo" disabled>Pé</button>
-    <button class="inativo" disabled>Plexo Braquial</button>
-    <button class="inativo" disabled>Plexo Lombar</button>
+  <!-- Seção do meio para seleção dos métodos -->
+  <div class="middle-section">
+    <button id="btn-ultrassom" class="ativo">Ultrassom</button>
+    <button id="btn-tomografia" class="inativo">Tomografia</button>
+    <button id="btn-ressonancia" class="inativo">Ressonância</button>
   </div>
 
-  <script>
-    // Variável para armazenar a articulação selecionada
-    let selectedJoint = "";
-    
-    // Adiciona o evento de clique para o botão ativo (Joelho)
-    document.getElementById("joelho-btn").addEventListener("click", function() {
-      selectedJoint = this.innerText;
-      console.log("Articulação selecionada: " + selectedJoint);
-      // Aqui você pode implementar a lógica para direcionar ou atualizar a interface conforme necessário
-    });
-  </script>
+  <!-- Seção inferior com os botões dos métodos -->
+  <!-- Ultrassom -->
+  <div id="ultrassom-section" class="bottom-section">
+    <button id="abdome-total-us" disabled>Abdome Total</button>
+    <button id="abdome-superior-us" disabled>Abdome Superior</button>
+    <button id="vias-urinarias-us" disabled>Vias Urinárias</button>
+    <button id="pelvico-us" disabled>Pélvico</button>
+    <button id="prostata-us" disabled>Próstata</button>
+    <button id="tireoide-us" disabled>Tireoide</button>
+    <button id="mamas-us" disabled>Mamas</button>
+    <button id="transvaginal-us" disabled>Transvaginal</button>
+  </div>
+
+  <!-- Tomografia -->
+  <div id="tomografia-section" class="bottom-section" style="display: none;">
+    <button id="cranio-tc" disabled>Crânio</button>
+    <button id="torax-tc" disabled>Tórax</button>
+    <button id="abdome-tc" disabled>Abdome</button>
+    <button id="coluna-lombar-tc" disabled>Coluna Lombar</button>
+    <button id="coluna-toracica-tc" disabled>Coluna Torácica</button>
+    <button id="coluna-cervical-tc" disabled>Coluna Cervical</button>
+  </div>
+
+  <!-- Ressonância -->
+  <div id="ressonancia-section" class="bottom-section" style="display: none;">
+    <button id="coluna-cervical-rm" disabled>Coluna Cervical</button>
+    <button id="coluna-toracica-rm" disabled>Coluna Torácica</button>
+    <button id="coluna-lombar-rm" disabled>Coluna Lombar</button>
+    <button id="ombro-rm" disabled>Ombro</button>
+    <button id="cotovelo-rm" disabled>Cotovelo</button>
+    <button id="punho-rm" disabled>Punho</button>
+    <button id="braco-rm" disabled>Braço</button>
+    <button id="quadril-rm" disabled>Quadril</button>
+    <button id="coxa-rm" disabled>Coxa</button>
+    <button id="bacia-rm" disabled>Bacia</button>
+    <button id="joelho-rm" disabled>Joelho</button>
+    <button id="perna-rm" disabled>Perna</button>
+    <button id="tornozelo-rm" disabled>Tornozelo</button>
+    <button id="pe-rm" disabled>Pé</button>
+    <button id="plexo-braquial-rm" disabled>Plexo Braquial</button>
+    <button id="plexo-lombar-rm" disabled>Plexo Lombar</button>
+  </div>
+  <script src="landing/index_js.js"></script>
 </body>
 </html>

@@ -2,9 +2,9 @@
   {
     "numero": 1,
     "codigo": "1a",
-    "resumo": "Osteofitose Marginal",
+    "resumo": "Osteófitos Discretos",
     "tipo": "substituicao",
-    "frase": "Discreta osteofitose marginal no fêmur, tíbia e patela.",
+    "frase": "Discreta osteofitose marginal no fêmur, tíbia e na patela.",
     "conclusao": "Alterações degenerativas discretas do joelho."
   },
   {
@@ -12,8 +12,8 @@
     "codigo": "1b",
     "resumo": "Osteoartrose",
     "tipo": "substituicao",
-    "frase": "Sinais de osteoartrose, caracterizada por irregularidades condrais, redução do espaço articular e reações osteofitárias marginais, mais evidentes no compartimento femorotibial medial lateral.",
-    "conclusao": "Osteoartrose do joelho com condropatia tricompartimental sendo mais acentuada no compartimento XXX."
+    "frase": "Sinais de osteoartrose, caracterizada por irregularidades condrais, redução do espaço articular e reações osteofitárias marginais, mais evidentes no compartimento femorotibial medial XXX lateral.",
+    "conclusao": "Osteoartrose do joelho com condropatia tricompartimental sendo mais acentuada no compartimento femorotibial XXX femoropatelar."
   },
   {
     "numero": 2,
@@ -36,7 +36,7 @@
     "codigo": "3a",
     "resumo": "Cisto de Baker",
     "tipo": "substituicao",
-    "frase": "Presença de líquido na bursa gastrocnêmio semimembranoso (cisto de Baker).",
+    "frase": "Presença de líquido na bursa entre o gastrocnêmio e semimembranoso (cisto de Baker).",
     "conclusao": "Cisto de Baker."
   },
   {
@@ -44,7 +44,7 @@
     "codigo": "3b",
     "resumo": "Filme Líquido na Fossa Poplítea",
     "tipo": "substituicao",
-    "frase": "Presença de pequeno filme líquido na bursa gastrocnêmio semimembranoso.",
+    "frase": "Presença de pequeno filme líquido na bursa entra o gastrocnêmio e semimembranoso.",
     "conclusao": "Diminuto cisto de Baker."
   },
   {
@@ -68,7 +68,7 @@
     "codigo": "4c",
     "resumo": "Fissura Oblíqua (L)",
     "tipo": "substituicao",
-    "frase": "Traço de hipersinal no corno posterior do menisco lateral estendendo-se para a superfície articular inferior sugestiva de fissura.",
+    "frase": "Traço de hipersinal com orientação oblíqua acometendo o corno posterior do menisco lateral estendendo-se para a superfície articular inferior sugestiva de fissura.",
     "conclusao": "Fissura oblíqua do menisco lateral."
   },
   {
@@ -98,10 +98,10 @@
   {
     "numero": 4,
     "codigo": "4g",
-    "resumo": "Rup. CX Redução de Volume",
-    "tipo": "substituicao",
-    "frase": "Ruptura complexa do menisco lateral acometendo o corno posterior e corpo com acentuada redução de volume.",
-    "conclusao": "Ruptura complexa do menisco lateral."
+    "resumo": "Cisto perimeniscal",
+    "tipo": "complementar",
+    "frase": "Identificada imagem de aspecto cístico junto do menisco, medindo cerca de XXX cm.",
+    "conclusao": "com cisto perimeniscal."
   },
   {
     "numero": 4,
@@ -132,7 +132,7 @@
     "codigo": "5c",
     "resumo": "Fissura Oblíqua (M)",
     "tipo": "substituicao",
-    "frase": "Traço de hipersinal no corno posterior do menisco medial estendendo-se para a superfície articular inferior sugestiva de fissura.",
+    "frase": "Traço de hipersinal com orientação oblíqua acometendo o corno posterior do menisco medial estendendo-se para a superfície articular inferior sugestiva de fissura.",
     "conclusao": "Fissura oblíqua do menisco medial."
   },
   {
@@ -162,10 +162,10 @@
   {
     "numero": 5,
     "codigo": "5g",
-    "resumo": "Ruptura com Redução de Volume",
-    "tipo": "substituicao",
-    "frase": "Ruptura complexa do menisco medial acometendo o corno posterior anterior e corpo com acentuada redução de volume.",
-    "conclusao": "Ruptura complexa do menisco medial."
+    "resumo": "Cisto perimeniscal",
+    "tipo": "complementar",
+    "frase": "Identificada imagem de aspecto cístico junto do menisco, medindo cerca de XXX cm.",
+    "conclusao": "com cisto perimeniscal."
   },
   {
     "numero": 5,
@@ -340,96 +340,96 @@
     "codigo": "14a",
     "resumo": "Condropatia Patelar Leve",
     "tipo": "substituicao",
-    "frase": "Cartilagem femoropatelar apresentando heterogeneidade do sinal, sem erosões.",
-    "conclusao": "Condropatia oatelar leve."
+    "frase": "Cartilagem femoropatelar apresentando heterogeneidade do sinal, com leve irregularidade, sem erosões profundas.",
+    "conclusao": "Condropatia patelar leve (ICRS 1)."
   },
   {
     "numero": 14,
     "codigo": "14b",
     "resumo": "Condropatia Patelar Moderada",
     "tipo": "substituicao",
-    "frase": "Cartilagem femoropatelar apresentando erosões acometendo menos de 50% da sua espessura.",
-    "conclusao": ""
+    "frase": "Cartilagem femoropatelar apresentando erosões que acometem menos de 50% da sua espessura.",
+    "conclusao": "Condropatia patelar (ICRS 2)."
   },
   {
     "numero": 14,
     "codigo": "14c",
     "resumo": "Condropatia Patelar Acentuada",
     "tipo": "substituicao",
-    "frase": "Cartilagem femoropatelar apresentando erosões acometendo mais de 50% da sua espessura.",
-    "conclusao": ""
+    "frase": "Cartilagem femoropatelar apresentando erosões profundas, que acometem mais de 50% da sua espessura, sem exposição óssea ou edema subcondral.",
+    "conclusao": "Condropatia patelar com erosões profundas (ICRS 4)."
   },
   {
     "numero": 14,
     "codigo": "14d",
     "resumo": "Condropatia Patelar Profunda",
     "tipo": "substituicao",
-    "frase": "Cartilagem femoropatelar apresentando erosão profunda na cartilagem patelar troclear, com exposição da cortical óssea. A lesão se estende por cerca de XXX cm.",
-    "conclusao": ""
+    "frase": "Cartilagem femoropatelar apresentando erosão profunda na cartilagem, com exposição da cortical óssea.",
+    "conclusao": "Condropatia patelar com erosões profundas (ICRS 4)."
   },
   {
     "numero": 15,
     "codigo": "15a",
-    "resumo": "Condropatia Femorotibial Medial Leve",
+    "resumo": "Condropatia FM Leve",
     "tipo": "substituicao",
-    "frase": "Cartilagem femorotibial medial com heterogeneidade do sinal, sem erosões.",
-    "conclusao": ""
+    "frase": "Cartilagem femorotibial medial com heterogeneidade do sinal, com leve irregularidade, sem erosões profundas.",
+    "conclusao": "Condropatia femorotibial medial leve (ICRS 1)."
   },
   {
     "numero": 15,
     "codigo": "15b",
-    "resumo": "Condropatia Femorotibial Medial Moderada",
+    "resumo": "Condropatia FM Moderada",
     "tipo": "substituicao",
     "frase": "Cartilagem femorotibial medial com erosões acometendo menos de 50% da sua espessura.",
-    "conclusao": ""
+    "conclusao": "Condropatia femorotibial medial (ICRS 2)."
   },
   {
     "numero": 15,
     "codigo": "15c",
-    "resumo": "Condropatia Femorotibial Medial Acentuada",
+    "resumo": "Condropatia FM Acentuada",
     "tipo": "substituicao",
-    "frase": "Cartilagem femorotibial medial com erosões acometendo mais de 50% da sua espessura.",
-    "conclusao": ""
+    "frase": "Cartilagem femorotibial medial com erosões profundas, que acometem mais de 50% da sua espessura, sem exposição óssea ou edema subcondral.",
+    "conclusao": "Condropatia femorotibial medial com erosões profundas (ICRS 4)."
   },
   {
     "numero": 15,
     "codigo": "15d",
-    "resumo": "Condropatia Femorotibial Medial Profunda",
+    "resumo": "Condropatia FM Profunda",
     "tipo": "substituicao",
-    "frase": "Cartilagem femorotibial medial com erosão profunda na zona de carga do côndilo femoral, com exposição da cortical óssea. A lesão se estende por cerca de XXX cm.",
-    "conclusao": ""
+    "frase": "Cartilagem femorotibial medial com erosão profunda na zona de carga do côndilo femoral, com exposição da cortical óssea. ",
+    "conclusao": "Condropatia femorotibial medial com erosões profundas (ICRS 4)."
   },
   {
     "numero": 16,
     "codigo": "16a",
-    "resumo": "Condropatia Femorotibial Lateral Leve",
+    "resumo": "Condropatia FL Leve",
     "tipo": "substituicao",
-    "frase": "Cartilagem femorotibial lateral com heterogeneidade do sinal, sem erosões.",
-    "conclusao": ""
+    "frase": "Cartilagem femorotibial lateral com heterogeneidade do sinal, com leve irregularidade, sem erosões profundas.",
+    "conclusao": "Condropatia femorotibial lateral leve (ICRS 1)."
   },
   {
     "numero": 16,
     "codigo": "16b",
-    "resumo": "Condropatia Femorotibial Lateral Moderada",
+    "resumo": "Condropatia FL Moderada",
     "tipo": "substituicao",
     "frase": "Cartilagem femorotibial lateral com erosões acometendo menos de 50% da sua espessura.",
-    "conclusao": ""
+    "conclusao": "Condropatia femorotibial lateral (ICRS 2)."
   },
   {
     "numero": 16,
     "codigo": "16c",
-    "resumo": "Condropatia Femorotibial Lateral Acentuada",
+    "resumo": "Condropatia FL Acentuada",
     "tipo": "substituicao",
-    "frase": "Cartilagem femorotibial lateral com erosões acometendo mais de 50% da sua espessura.",
-    "conclusao": ""
+    "frase": "Cartilagem femorotibial lateral com erosões profundas, que acometem mais de 50% da sua espessura, sem exposição óssea ou edema subcondral.",
+    "conclusao": "Condropatia femorotibial lateral com erosões profundas (ICRS 4)."
   },
   {
     "numero": 16,
     "codigo": "16d",
-    "resumo": "Condropatia Femorotibial Lateral Profunda",
+    "resumo": "Condropatia FL Profunda",
     "tipo": "substituicao",
-    "frase": "Cartilagem femorotibial lateral com erosão profunda na zona de carga do côndilo femoral, com exposição da cortical óssea. A lesão se estende por cerca de XXX cm.",
-    "conclusao": ""
+    "frase": "Cartilagem femorotibial lateral com erosão profunda na zona de carga do côndilo femoral, com exposição da cortical óssea. ",
+    "conclusao": "Condropatia femorotibial lateral com erosões profundas (ICRS 4)."
   },
   {
     "numero": 17,
@@ -437,13 +437,13 @@
     "resumo": "Patela Alta",
     "tipo": "substituicao",
     "frase": "Patela alta à extensão (índice de Insall-Salvati > 1,5).",
-    "conclusao": ""
+    "conclusao": "Alterações morfológicas relacionadas à instabilidade femoropatelar."
   },
   {
     "numero": 17,
     "codigo": "17b",
     "resumo": "Inclinação Lateral Patelar",
-    "tipo": "substituicao",
+    "tipo": "complementar",
     "frase": "Inclinação lateral patelar a extensão (ângulo de inclinação >20º).",
     "conclusao": ""
   },
@@ -451,7 +451,7 @@
     "numero": 17,
     "codigo": "17c",
     "resumo": "Displasia Troclear",
-    "tipo": "substituicao",
+    "tipo": "complementar",
     "frase": "Aumento do ângulo do sulco da tróclea (ângulo do sulco >165º). Redução da profundidade troclear (<3mm).",
     "conclusao": ""
   },
@@ -460,15 +460,14 @@
     "codigo": "18a",
     "resumo": "Varizes na Coxa/Perna",
     "tipo": "substituicao",
-    "frase": "Presença de dilatações varicosas de veias superficiais da face medial da coxa / perna (varizes).",
+    "frase": "Presença de dilatações varicosas de veias superficiais da face medial da coxa e perna (varizes).",
     "conclusao": ""
   },
   {
     "numero": 99,
     "codigo": "99a",
-    "resumo": "Achado Cicatricial",
-    "tipo": "substituicao",
-    "frase": "Presença de tecido cicatricial junto ao ligamento patelofemoral medial.",
-    "conclusao": ""
+    "resumo": " X",
+    "tipo": "matematica",
+    "script": " x"
   }
 ]

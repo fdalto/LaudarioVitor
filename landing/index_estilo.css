@@ -1,0 +1,133 @@
+body {
+    background-color: #ADD8E6; /* Azul claro */
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Seção superior: duas imagens grandes */
+  .top-section {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top-section img {
+    max-height: 45vh;
+    width: 80%;
+    margin: 10%;
+    object-fit: contain;
+  }
+  
+  /* Seção do meio para seleção dos métodos */
+  .middle-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .middle-section button {
+    border: none;
+    border-radius: 5px;
+    font-size: 26px;
+    transition: background-color 0.3s;
+    padding: 10px 20px;
+    margin: 0 10px;
+  }
+  
+  /* Botão Ultrassom */
+  #btn-ultrassom.ativo {
+    background-color: #8b94e0;
+    color: #fff;
+  }
+  
+  #btn-ultrassom.inativo {
+    background-color: #d3d7f3;
+    color: #666;
+  }
+  
+  #btn-ultrassom.ativo:hover {
+    background-color: #6a73d2;
+  }
+  
+  #btn-ultrassom.inativo:hover {
+    background-color: #c1c5e8;
+  }
+  
+  /* Botão Tomografia */
+  #btn-tomografia.ativo {
+    background-color: #ffc1b8;
+    color: #000;
+  }
+  
+  #btn-tomografia.inativo {
+    background-color: #ffe2df;
+    color: #666;
+  }
+  
+  #btn-tomografia.ativo:hover {
+    background-color: #ff9f91;
+  }
+  
+  #btn-tomografia.inativo:hover {
+    background-color: #ffcbc0;
+  }
+  
+  /* Botão Ressonância */
+  #btn-ressonancia.ativo {
+    background-color: #a8e6cf;
+    color: #000;
+  }
+  
+  #btn-ressonancia.inativo {
+    background-color: #d0f3e2;
+    color: #666;
+  }
+  
+  #btn-ressonancia.ativo:hover {
+    background-color: #8cd9ac;
+  }
+  
+  #btn-ressonancia.inativo:hover {
+    background-color: #bce9d5;
+  }
+  
+  /* Seção inferior: botões dos métodos */
+  .bottom-section {
+    height: 40vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #e0e0e0;
+  }
+  
+  /* Estilos para os botões da seção inferior */
+  .bottom-section button {
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background-color 0.3s;
+  }
+  
+  .bottom-section button:enabled {
+    background-color: #90ee90; 
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .bottom-section button:enabled:hover {
+    background-color: #7fdd7f;
+  }
+  
+  .bottom-section button:disabled {
+    background-color: #ccc;
+    color: #666;
+    filter: brightness(1.2);
+    cursor: not-allowed;
+  }
+  

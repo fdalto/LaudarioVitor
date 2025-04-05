@@ -1,7 +1,16 @@
+// recebe do site anterior o modelo selecionado
+const selectedReport = sessionStorage.getItem("selectedReport");
+if (!selectedReport) { //se nao tem report
+  // Se não encontrar, redireciona para a página index
+  window.location.href = "index.html";
+} else {
+  console.log("Tipo de relatório:", selectedReport);
+}
+
 // Carregamento dinâmico de frases e substituições a partir de arquivos JSON
 Promise.all([
-  fetch('frasesOriginais.json').then(res => res.json()),
-  fetch('substituicoes.json').then(res => res.json())
+  fetch(`json/${selectedReport}/frasesOriginais.json`).then(res => res.json()),
+  fetch(`json/${selectedReport}/substituicoes.json`).then(res => res.json())
 ]).then(([frasesOriginaisArray, substituicoesArray]) => {
 
   const frasesOriginais = {};            // Frases normais numeradas

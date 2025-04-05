@@ -3,35 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <title>Relatório de Joelho</title>
-  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="editor_relatorios/editor_estilos.css">
 </head>
 <body>
-  <div id="menu">
-    <!-- Este conteúdo será preenchido dinamicamente via JS -->
-  </div>
-  <div id="relatorio">
-    <div id="campoRelatorio" contenteditable="true">
-      <!-- Conteúdo será gerado automaticamente via JS -->
+  <div id="container">
+    <div id="menu">
+      <!-- Este conteúdo será preenchido dinamicamente via JS -->
     </div>
-    <pre id="voiceRecognizeDiv" style="background: #f1f1f1; border: 1px solid black; padding: 20px;">Status: ?</pre>
-    <div id="configTexto">
-      <button id="startButton">Iniciar Reconhecimento de Voz</button>
-      <label for="fonte">Fonte:</label>
-      <select id="fonte">
-        <option value="Arial">Arial</option>
-        <option value="Georgia">Georgia</option>
-        <option value="Courier New">Courier New</option>
-      </select>
-    
-      <label for="tamanho">Tamanho:</label>
-      <input type="number" id="tamanho" value="16" min="10" max="30" style="width: 50px;">px
-    
-      <label for="cor">Cor:</label>
-      <input type="color" id="cor" value="#000000">
-    </div>  
+    <div id="relatorio">
+      <div id="campoRelatorio" contenteditable="true">
+        <!-- Conteúdo será gerado automaticamente via JS -->
+      </div>
+      <pre id="voiceRecognizeDiv" style="background: #f1f1f1; border: 1px solid black; padding: 20px;">Status: ?</pre>
+      <div id="configTexto">
+        <button id="startButton">Iniciar Reconhecimento de Voz</button>
+        <label for="fonte">Fonte:</label>
+        <select id="fonte">
+          <option value="Arial">Arial</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Courier New">Courier New</option>
+        </select>
+      
+        <label for="tamanho">Tamanho:</label>
+        <input type="number" id="tamanho" value="16" min="10" max="30" style="width: 50px;">px
+      
+        <label for="cor">Cor:</label>
+        <input type="color" id="cor" value="#000000">
+      </div>  
+    </div>
   </div>
-  <script src="substituicoes.js"></script>
-  <script src="muda_texto.js"></script>
-  <script src="voz.js"></script>
+  <script src="editor_relatorios/substituicoes.js"></script>
+  <script src="editor_relatorios/muda_texto.js"></script>
+  <script src="editor_relatorios/voz.js"></script>
+  <script src="editor_relatorios/divisoria.js"></script>
 </body>
 </html>

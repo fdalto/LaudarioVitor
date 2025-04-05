@@ -1,0 +1,97 @@
+[
+  {
+    "numero": 1,
+    "rotulo": "Ossos",
+    "frase": "- Estruturas ósseas analisadas de morfologia e intensidade de sinal medular conservados."
+  },
+  {
+    "numero": 2,
+    "rotulo": "Derrame",
+    "frase": "- Não observamos derrame articular."
+  },
+  {
+    "numero": 3,
+    "rotulo": "Fossa Poplítea",
+    "frase": "- Fossa poplítea sem alterações."
+  },
+  {
+    "numero": 4,
+    "rotulo": "Menisco Lateral",
+    "frase": "- Menisco lateral de morfologia, contornos e intensidade de sinal habituais."
+  },
+  {
+    "numero": 5,
+    "rotulo": "Menisco Medial",
+    "frase": "- Menisco medial de morfologia, contornos e intensidade de sinal habituais."
+  },
+  {
+    "numero": 6,
+    "rotulo": "Ligamento Cruzado Anterior",
+    "frase": "- Ligamento cruzado anterior de espessura e intensidade de sinal preservadas."
+  },
+  {
+    "numero": 7,
+    "rotulo": "Ligamentos Colaterais",
+    "frase": "- Ligamentos colaterais lateral e medial de espessura e intensidade de sinal habituais."
+  },
+  {
+    "numero": 8,
+    "rotulo": "Ligamento Cruzado Posterior",
+    "frase": "- Ligamento cruzado posterior apresenta-se de espessura e intensidade de sinais habituais."
+  },
+  {
+    "numero": 9,
+    "rotulo": "Canto Posterolateral",
+    "frase": "- Estruturas do canto posterolateral íntegras."
+  },
+  {
+    "numero": 10,
+    "rotulo": "Pata de Ganso",
+    "frase": "- Tendões da pata de ganso com intensidade de sinal e contornos normais."
+  },
+  {
+    "numero": 11,
+    "rotulo": "Partes moles",
+    "frase": "- Partes moles sem alterações."
+  },
+  {
+    "numero": 12,
+    "rotulo": "Tendão Quadricipital/Patelar",
+    "frase": "- Tendões do quadríceps e patelar de aspecto normal."
+  },
+  {
+    "numero": 13,
+    "rotulo": "Gordura de Hoffa",
+    "frase": "- Gordura de Hoffa com intensidade de sinal habitual."
+  },
+  {
+    "numero": 14,
+    "rotulo": "Cartilagem Femoropatelar",
+    "frase": "- Cartilagem femoropatelar preservada."
+  },
+  {
+    "numero": 15,
+    "rotulo": "Cartilagem Femorotibial Medial",
+    "frase": "- Cartilagem do compartimento femorotibial medial conservada."
+  },
+  {
+    "numero": 16,
+    "rotulo": "Cartilagem Femorotibial Lateral",
+    "frase": "- Cartilagem do compartimento femorotibial lateral sem alterações."
+  },
+  {
+    "numero": 17,
+    "rotulo": "Instabilidade Patelar",
+    "frase": "- Patela em normoposição à extensão."
+  },
+  {
+    "numero": 18,
+    "rotulo": "Musculatura / Vasos",
+    "frase": "- Vasos poplíteos e musculatura sem achados significativos."
+  },
+  {
+    "numero": 99,
+    "rotulo": " ",
+    "frase": "      "
+  }
+]
