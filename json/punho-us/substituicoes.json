@@ -1,0 +1,90 @@
+[
+  {
+    "numero": 1,
+    "codigo": "1a",
+    "resumo": "Artrose",
+    "tipo": "substituicao",
+    "frase": "Osteófitos marginais nas articulações intercarpais com derrame articular.",
+    "conclusao": "Osteoartrose do punho com derrame articular."
+  },
+  {
+    "numero": 2,
+    "codigo": "2a",
+    "resumo": "Derrame",
+    "tipo": "substituicao",
+    "frase": "Distensão líquida articular com espessamento sinovial leve / moderado.",
+    "conclusao": "Derrame articular intercarpal."
+  },
+  {
+    "numero": 2,
+    "codigo": "2b",
+    "resumo": "Sinovite",
+    "tipo": "complementar",
+    "frase": "Notando-se aumento do sinal Doppler inferindo sinovite em atividade.",
+    "conclusao": ""
+  },
+  {
+    "numero": 3,
+    "codigo": "3a",
+    "resumo": "Demais",
+    "tipo": "substituicao",
+    "frase": "Demais tendões extensores do carpo com espessura, morfologia e ecotextura normais, sem distensão líquida das bainhas sinoviais.",
+    "conclusao": ""
+  },
+  {
+    "numero": 3,
+    "codigo": "3b",
+    "resumo": "Tenossinovite",
+    "tipo": "complementar",
+    "frase": "Distensão líquida da bainha sinovial dos tendões extensores do XXX º compartimento do carpo, com espessamento e hipoecogenicidade tendíneos, associados à sinal Doppler positivo, compatível com tenossinovite.",
+    "conclusao": "Tenossinovite dos extensores do XXX compartimento."
+  },
+  {
+    "numero": 3,
+    "codigo": "3c",
+    "resumo": "TSS de Quervain",
+    "tipo": "complementar",
+    "frase": "Espessamento do retináculo dos extensores do 1º compartimento, medindo cerca de XXX mm. Tendões do 1º compartimento extensor levemente hipoecogênicos, espessados e com mínima quantidade de líquido na sua bainha sinovial distalmente ao retináculo.",
+    "conclusao": "Compatível com tenossinovite de Quervain."
+  },
+  {
+    "numero": 3,
+    "codigo": "3d",
+    "resumo": "Variante Anatômica",
+    "tipo": "complementar",
+    "frase": "Observa-se variante anatômica do adutor longo do polegar com aspecto multifascicular sendo identificados pelo menos 4 bandas.",
+    "conclusao": ""
+  },
+  {
+    "numero": 3,
+    "codigo": "3e",
+    "resumo": "Banda Intertendínea",
+    "tipo": "complementar",
+    "frase": "Presença de banda hipoecogênica envolvendo os tendões e se insinuando entre os dois formando septo inter-tendíneo.",
+    "conclusao": ""
+  },
+  {
+    "numero": 4,
+    "codigo": "4a",
+    "resumo": "Tendinopatia Flex",
+    "tipo": "substituicao",
+    "frase": "Tendão XXXX espessado e heterogêneo, predominantemente hipoecogênico, de contornos regulares, apresentando perda do seu padrão fibrilar habitual, sem evidências de rupturas.",
+    "conclusao": "Tendinopatia do tendão flexor XXX do carpo."
+  },
+  {
+    "numero": 6,
+    "codigo": "6a",
+    "resumo": "Neuropatia do Nervo Mediano",
+    "tipo": "substituicao",
+    "frase": "Nervo mediano apresentando espessamento e alteração da sua ecogenicidade, na região do túnel do carpo, com área seccional transversa estimada em XXX mm² [VR<14mm²]. Área seccional na região pré-túnel medindo XXX mm².",
+    "conclusao": "Sinais de neuropatia do mediano (Sd. de túnel do carpo)."
+  },
+  {
+    "numero": 8,
+    "codigo": "8a",
+    "resumo": "Cisto Sinovial",
+    "tipo": "substituicao",
+    "frase": "Imagem de aspecto cístico, de paredes finas e lisas, contornos lobulados e bem definidos, com conteúdo anecóico e homogêneo, localizada na face dorsal do punho, profundamente aos tendões do XXX° e do XXX° compartimentos extensores, com aparente comunicação (colo) para a articulação radiocarpal / XXX. O cisto mede cerca de XXX cm no seu maior eixo.  Não há evidências de fluxo ao estudo Doppler no interior da imagem.",
+    "conclusao": "Cisto artrossinovial dorsal do carpo."
+  }
+]

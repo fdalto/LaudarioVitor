@@ -1,0 +1,123 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  background-color: #e6f2ff; /* azul claro */
+}
+
+#container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#menu {
+  width: 200px;
+  min-width: 100px;
+  background: #f5f5f5;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+}
+
+#relatorio {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Divisória ajustável */
+#resizer {
+  width: 5px;
+  cursor: col-resize;
+  background: #ccc;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+#campoRelatorio {
+  height: 90%;
+  overflow-y: auto;
+  background: white;
+  padding: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin: 5px 0;
+  font-size: 16px;
+}
+#campoRelatorio span {
+  color: red;
+}
+
+.grupo {
+  margin-bottom: 20px;
+}
+
+.frase {
+  background: rgb(144, 173, 240);
+  border: none;
+  padding: 6px;
+  margin: 3px 0;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.frase:hover {
+  background: rgb(102, 125, 208);
+  color: white;
+}
+
+.numero-verde {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.normal {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+#configTexto {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(240, 240, 240, 0.9);
+  border: 1px solid #ccc;
+  padding: 3px 6px;
+  border-radius: 8px;
+  font-size: 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+#configTexto label {
+  margin-right: 2px;
+}
+
+#startButton.ativo {
+  border: 2px solid rgb(230, 104, 26); /* Borda vermelha quando gravando */
+}
+
+#startButton {
+  width: fit-content;
+  align-self: center;
+  margin: 8px;
+}
+
+#relatorio p {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}

@@ -115,6 +115,34 @@ function createBlock(numero, dataOriginal, substituicoesGroup) {
       typeSelect.value = tipo;
       typeLine.appendChild(typeSelect);
       subDiv.appendChild(typeLine);
+
+      // --- Adição dos 2 botões ao lado do <select> ---
+      // Botão de lixeira (remove)
+      var btnRemove = document.createElement('button');
+      btnRemove.type = 'button';
+      btnRemove.textContent = '🗑';
+      // Atribui um ID que combine o número do bloco e o código da substituição
+      btnRemove.id = 'btn-remove-' + numero + '-' + sub.codigo;
+      // classe para alterar estilo
+      btnRemove.classList.add('button-remove');
+      // Sem função por enquanto; estilo básico para visualização
+      btnRemove.style.marginLeft = '5px';
+      
+      // Botão de adição (+)
+      var btnAdd = document.createElement('button');
+      btnAdd.type = 'button';
+      btnAdd.textContent = '+';
+      // Atribui um ID 
+      btnAdd.id = 'btn-add-' + numero + '-' + sub.codigo;
+      btnAdd.classList.add('linha-mais');
+      btnAdd.style.marginLeft = '5px';
+      
+      // Adiciona os botões à DIV type-line, logo após o <select>
+      typeLine.appendChild(btnRemove);
+      typeLine.appendChild(btnAdd);
+      // ---------------------------------------------------
+      
+      subDiv.appendChild(typeLine);
       
       // Define o estado inicial conforme o tipo
       if (typeSelect.value === "matematica") {
@@ -153,13 +181,20 @@ function createBlock(numero, dataOriginal, substituicoesGroup) {
 // Função para salvar o JSON de frasesOriginais no formato desejado (array de objetos)
 function saveOriginais() {
   var originaisArray = [];
+  // Salva os blocos normais (que possuem número, rótulo e frase)
   document.querySelectorAll('.block').forEach(function(block) {
-    // Usa o número salvo no dataset, convertendo para número
     var numero = Number(block.dataset.number);
     var rotulo = block.querySelector('.rotulo input').value;
     var frase = block.querySelector('.original-phrase input').value;
     originaisArray.push({ numero: numero, rotulo: rotulo, frase: frase });
   });
+  
+  // Busca o campo de conclusão criado separadamente
+  var conclInput = document.querySelector('.conclusion-container .conclusion-input');
+  if (conclInput) {
+    originaisArray.push({ conclusao: 99, frase: conclInput.value });
+  }
+  
   var dataStr = JSON.stringify(originaisArray, null, 2);
   var blob = new Blob([dataStr], { type: "application/json" });
   var url = URL.createObjectURL(blob);
@@ -259,26 +294,57 @@ Promise.all([
     }
   }
 
-  // Monta os blocos preservando o número conforme consta no arquivo
+  // Separa os itens normais dos dados de conclusão
+  var conclusionData = null;
   if (Array.isArray(originais)) {
-    // Se for array, utiliza o campo "numero" se existir, senão (index+1)
     originais.forEach(function(item, index) {
-      var numero = (item.numero !== undefined) ? item.numero : (index + 1);
-      var subsGroup = subsPorNumero[numero] || [];
-      var block = createBlock(numero, item, subsGroup);
-      content.appendChild(block);
+      // Se o item possui propriedade "numero", monta o bloco normal
+      if (item.numero !== undefined) {
+        var numero = item.numero !== undefined ? item.numero : (index + 1);
+        var subsGroup = subsPorNumero[numero] || [];
+        var block = createBlock(numero, item, subsGroup);
+        content.appendChild(block);
+      } 
+      // Se não tiver "numero", mas tiver "conclusao", é o objeto de conclusão
+      else if (item.conclusao !== undefined) {
+        conclusionData = item;
+      }
     });
   } else {
-    // Se for objeto, usa as chaves do próprio objeto
+    // Caso seja objeto (não array), adapte conforme necessário
     var keys = Object.keys(originais);
     keys.sort(function(a, b) { return Number(a) - Number(b); });
     keys.forEach(function(key) {
       var dataOriginal = originais[key];
-      var numero = key;
-      var subsGroup = subsPorNumero[numero] || [];
-      var block = createBlock(numero, dataOriginal, subsGroup);
-      content.appendChild(block);
+      // Se existir o campo "numero", monta o bloco
+      if (dataOriginal.numero !== undefined) {
+        var subsGroup = subsPorNumero[key] || [];
+        var block = createBlock(key, dataOriginal, subsGroup);
+        content.appendChild(block);
+      } else if (dataOriginal.conclusao !== undefined) {
+        conclusionData = dataOriginal;
+      }
     });
+  }
+
+  // Se houver objeto de conclusão, cria um campo separado
+  if (conclusionData) {
+    var conclusionContainer = document.createElement('div');
+    conclusionContainer.className = 'conclusion-container';
+
+    // Título maior "CONCLUSÃO"
+    var title = document.createElement('h2');
+    title.textContent = "CONCLUSÃO";
+    conclusionContainer.appendChild(title);
+
+    // Campo editável para a frase de conclusão
+    var conclInput = document.createElement('input');
+    conclInput.type = 'text';
+    conclInput.className = 'conclusion-input';
+    conclInput.value = conclusionData.frase || '';
+    conclusionContainer.appendChild(conclInput);
+
+    content.appendChild(conclusionContainer);
   }
 })
 .catch(function(err) {

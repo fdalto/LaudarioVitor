@@ -1,0 +1,42 @@
+[
+  {
+    "numero": 1,
+    "rotulo": "Ossos",
+    "frase": "Superfícies ósseas de contornos regulares."
+  },
+  {
+    "numero": 2,
+    "rotulo": "Derrame",
+    "frase": "Ausência de derrame ou espessamento sinovial significativos."
+  },
+  {
+    "numero": 3,
+    "rotulo": "Extensores",
+    "frase": "Compartimentos tendíneos extensores do carpo com espessura, morfologia e ecotextura normais, sem distensão líquida das bainhas sinoviais."
+  },
+  {
+    "numero": 4,
+    "rotulo": "Tendões Flexores",
+    "frase": "Tendões flexores na região do túnel do carpo apresentando ecogenicidade e aspecto habitual."
+  },
+  {
+    "numero": 5,
+    "rotulo": "Planos Musculares",
+    "frase": "Planos musculares e subcutâneo de espessura conservados."
+  },
+  {
+    "numero": 6,
+    "rotulo": "Nervo Mediano",
+    "frase": "Nervo mediano com calibre e ecotextura habituais. Área seccional transversa do nervo mediano na região do túnel do carpo estimada em XXX mm² (VR<14mm²)."
+  },
+  {
+    "numero": 8,
+    "rotulo": "Lesões Expansivas",
+    "frase": "Ausência de lesões expansivas sólidas ou císticas."
+  },
+  {
+    "numero": 99,
+    "rotulo": " ",
+    "frase": " "
+  }
+]

@@ -1,6 +1,8 @@
 body {
   font-family: Arial, sans-serif;
   margin: 20px;
+  background-color: #1e1c28;  /* Fundo escuro */
+  color: #e0e0e0;           /* Texto claro */
 }
 .block {
   border: 1px solid #ccc;
@@ -54,4 +56,31 @@ button.download-btn {
   cursor: pointer;
   margin-right: 10px;
   font-size: 14px;
+}
+.conclusion-container {
+  border: 1px solid #333;
+  padding: 10px;
+  margin-top: 20px;
+}
+.conclusion-container h2 {
+  margin-top: 0;
+}
+.conclusion-input {
+  width: 90%;
+  padding: 5px;
+  font-size: 16px;
+}
+input[type="text"] {
+  background-color: #afadad; /* cinza claro */
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 3px;
+}
+.linha-mais{
+  background-color: rgb(37, 83, 126);
+  color: rgb(19, 216, 220);
+  border-radius: 30%;
+}
+.button-remove{
+  background-color: #36181c;
 }

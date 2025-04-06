@@ -64,16 +64,22 @@ function renderizarConclusao() {
 
 function gerarCampoRelatorio(frasesOriginaisArray) {
   const campo = document.getElementById('campoRelatorio');
-  frasesOriginaisArray.forEach(({ numero, frase }) => {
-    const p = document.createElement('p');
-    p.dataset.linha = numero;
-    p.innerText = frase;
-    campo.appendChild(p);
-    const espaco = document.createElement('p');
-    espaco.innerHTML = '&nbsp;'; // espaço visual sem conteúdo
-    campo.appendChild(espaco);
+  
+  // Renderiza apenas os itens que possuem "numero"
+  frasesOriginaisArray.forEach(item => {
+    if (item.numero) {
+      const { numero, frase } = item;
+      const p = document.createElement('p');
+      p.dataset.linha = numero;
+      p.innerText = frase;
+      campo.appendChild(p);
+      const espaco = document.createElement('p');
+      espaco.innerHTML = '&nbsp;';
+      campo.appendChild(espaco);
+    }
   });
 
+  // Bloco de conclusão
   const blocoConclusaoTitulo = document.createElement('p');
   blocoConclusaoTitulo.innerHTML = '<strong>Impressão radiológica:</strong>';
   campo.appendChild(blocoConclusaoTitulo);
@@ -81,13 +87,15 @@ function gerarCampoRelatorio(frasesOriginaisArray) {
   const conclusaoDinamica = document.createElement('div');
   conclusaoDinamica.id = 'conclusao-dinamica';
 
+  // Procura o item com "conclusao": 99
+  const conclusaoObj = frasesOriginaisArray.find(item => item.conclusao === 99);
   const p1 = document.createElement('p');
-  p1.innerText = '- Ressonância magnética do joelho XXX sem evidência de alterações patológicas.';
-  const p2 = document.createElement('p');
-  p2.innerText = '- Ligamento cruzado anterior e meniscos sem evidencias de rupturas nas imagens analisadas.';
-
+  if (conclusaoObj && conclusaoObj.frase) {
+    p1.innerText = conclusaoObj.frase;
+  } else {
+    p1.innerText = 'Exame sem evidênias de alterações patológicas.';
+  }
   conclusaoDinamica.appendChild(p1);
-  conclusaoDinamica.appendChild(p2);
   campo.appendChild(conclusaoDinamica);
 }
 
@@ -97,10 +105,10 @@ function montarMenu(frasesOriginais, frasesOriginaisInfo, substituicoes, rotulos
   Object.entries(frasesOriginais).forEach(([numero, fraseNormal]) => {
     const grupo = document.createElement('div');
     grupo.classList.add('grupo');
-
+    grupo.id = numero;
     const normal = document.createElement('span');
     normal.className = 'normal';
-    const rotulo = frasesOriginaisInfo[numero]?.rotulo || "Normal";
+    const rotulo = frasesOriginaisInfo[numero]?.rotulo || "_";
     normal.innerHTML = `<span class="numero-verde">${numero}</span> ${rotulo}`;
     normal.style.cursor = 'pointer';
     normal.onclick = () => {
