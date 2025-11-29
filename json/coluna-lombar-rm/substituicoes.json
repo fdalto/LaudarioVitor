@@ -3,7 +3,7 @@
     "numero": 1,
     "codigo": "1a",
     "resumo": "Escoliose lombar E",
-    "tipo": "substituicao",
+    "tipo": "complementar",
     "frase": "Desvio da coluna lombar com convexidade para a esquerda.",
     "conclusao": "Escoliose lombar com convexidade à esquerda."
   },
@@ -11,7 +11,7 @@
     "numero": 1,
     "codigo": "1b",
     "resumo": "Escoliose lombar D",
-    "tipo": "substituicao",
+    "tipo": "complementar",
     "frase": "Desvio da coluna lombar com convexidade para a direita.",
     "conclusao": "Escoliose lombar com convexidade à direita."
   },
@@ -19,7 +19,7 @@
     "numero": 1,
     "codigo": "1c",
     "resumo": "Retificação da lordose",
-    "tipo": "substituicao",
+    "tipo": "complementar",
     "frase": "Retificação da lordose lombar fisiológica.",
     "conclusao": "Retificação da lordose lombar."
   },
@@ -43,7 +43,7 @@
     "numero": 1,
     "codigo": "1f",
     "resumo": "Discopatia degenerativa XXX",
-    "tipo": "substituicao",
+    "tipo": "complementar",
     "frase": "Discopatia degenerativa em XXX caracterizada por hipossinal do núcleo pulposo nas sequências ponderadas em T2, com redução do espaço discal e osteofitose marginal, notando-se alteração de sinal com padrão de edema/lipossubstituição nos platôs dos corpos vertebrais justapostos.",
     "conclusao": "Discopatia degenerativa em XXX."
   },
@@ -58,8 +58,8 @@
   {
     "numero": 1,
     "codigo": "1h",
-    "resumo": "Anterolistese XXX sobre XXX",
-    "tipo": "substituicao",
+    "resumo": "Anterolistese",
+    "tipo": "complementar",
     "frase": "Anterolistese do corpo vertebral de XXX sobre XXX, com deslocamento menor ou maior do que 25% do diâmetro ântero-posterior do corpo vertebral.",
     "conclusao": "Anterolistese de XXX sobre XXX."
   },
@@ -67,7 +67,7 @@
     "numero": 1,
     "codigo": "1i",
     "resumo": "Espondilólise",
-    "tipo": "substituicao",
+    "tipo": "complementar",
     "frase": "Solução de continuidade dos istmos interapofisários de XXX, compatível com espondilólise.",
     "conclusao": "Espondilólise em XXX."
   },
@@ -75,7 +75,7 @@
     "numero": 1,
     "codigo": "1j",
     "resumo": "Hemangioma vertebral",
-    "tipo": "substituicao",
+    "tipo": "complementar",
     "frase": "Foco de alteração de sinal no corpo vertebral de XXX, com características compatíveis com hemangioma ou depósito focal de gordura.",
     "conclusao": "Hemangioma ou depósito focal de gordura no corpo vertebral de XXX."
   },
@@ -83,7 +83,7 @@
     "numero": 1,
     "codigo": "1k",
     "resumo": "Hemangiomas múltiplos",
-    "tipo": "substituicao",
+    "tipo": "complementar",
     "frase": "Focos de alteração de sinal nos corpos vertebrais de XXX e de XXX, com características compatíveis com hemangiomas ou depósitos focais de gordura.",
     "conclusao": "Hemangiomas ou depósitos focais de gordura nos corpos vertebrais de XXX e XXX."
   },
@@ -147,7 +147,7 @@
     "numero": 2,
     "codigo": "2c",
     "resumo": "Pós-operatório com instrumentação posterior",
-    "tipo": "substituicao",
+    "tipo": "complementar",
     "frase": "Sinais de abordagem cirúrgica via posterior, com parafusos metálicos transpediculares e hastes de fixação nos níveis de XXX, determinando artefatos de susceptibilidade magnética e limitação da avaliação local. Laminectomia e flavectomia em XXX, associadas a desorganização arquitetural da musculatura paravertebral e planos superficiais.",
     "conclusao": "Sinais de tratamento cirúrgico com instrumentação posterior e laminectomia em XXX."
   },
@@ -170,433 +170,433 @@
   {
     "numero": 6,
     "codigo": "6a",
-    "resumo": "Abaulamento discal difuso",
+    "resumo": "Abaulamento discal",
     "tipo": "substituicao",
-    "frase": "Abaulamento discal difuso em XXX tocando a face ventral do saco dural e se estendendo aos forames intervertebrais.",
-    "conclusao": "Abaulamento discal difuso em XXX."
+    "frase": "Nível T12-L1: abaulamento discal difuso tocando a face ventral do saco dural e se estendendo aos forames intervertebrais determinando redução da sua amplitude.",
+    "conclusao": "Abaulamento discal difuso em T12-L1."
   },
   {
     "numero": 6,
     "codigo": "6b",
-    "resumo": "Protrusão discal central",
+    "resumo": "Protrusão discal",
     "tipo": "substituicao",
-    "frase": "Protrusão discal central posterior em XXX tocando a face ventral do saco dural.",
-    "conclusao": "Protrusão discal posterior em XXX."
+    "frase": "Nível T12-L1: protrusão discal central posterior tocando a face ventral do saco dural determinando leve impressão sobre o saco dural.",
+    "conclusao": "Protrusão discal posterior em T12-L1."
   },
   {
     "numero": 6,
     "codigo": "6c",
     "resumo": "Protrusão central acentuada",
     "tipo": "substituicao",
-    "frase": "Protrusão discal central posterior em XXX exercendo compressão da face ventral do saco dural e determinando redução da amplitude do canal vertebral.",
-    "conclusao": "Protrusão discal posterior em XXX com redução do canal vertebral."
+    "frase": "Nível T12-L1: protrusão discal central posterior exercendo compressão da face ventral do saco dural e determinando redução da amplitude do canal vertebral.",
+    "conclusao": "Protrusão discal posterior em T12-L1 determiandno estenose do canal vertebral."
   },
   {
     "numero": 6,
     "codigo": "6d",
     "resumo": "Hérnia/protrusão foraminal direita",
     "tipo": "substituicao",
-    "frase": "Protrusão discal foraminal direita em XXX determinando estreitamento do forame neural neste nível.",
-    "conclusao": "Protrusão discal foraminal direita em XXX com estreitamento foraminal."
+    "frase": "Nível T12-L1: protrusão discal foraminal direita determinando estreitamento do forame neural neste nível.",
+    "conclusao": "Protrusão discal foraminal direita em T12-L1 com estreitamento foraminal."
   },
   {
     "numero": 6,
     "codigo": "6e",
     "resumo": "Hérnia/protrusão foraminal esquerda",
     "tipo": "substituicao",
-    "frase": "Protrusão discal foraminal esquerda em XXX determinando estreitamento do forame neural neste nível.",
-    "conclusao": "Protrusão discal foraminal esquerda em XXX com estreitamento foraminal."
+    "frase": "Nível T12-L1: protrusão discal foraminal esquerda determinando estreitamento do forame neural neste nível.",
+    "conclusao": "Protrusão discal foraminal esquerda em T12-L1 com estreitamento foraminal."
   },
   {
     "numero": 6,
     "codigo": "6f",
-    "resumo": "Complexo disco-osteofitário foraminal D",
+    "resumo": "Complexo disco-osteofitário foraminal direito",
     "tipo": "substituicao",
-    "frase": "Complexo disco-osteofitário foraminal direito em XXX tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
-    "conclusao": "Complexo disco-osteofitário foraminal direito em XXX com redução do calibre foraminal."
+    "frase": "Nível T12-L1: complexo disco-osteofitário foraminal direito tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
+    "conclusao": "Complexo disco-osteofitário foraminal direito em T12-L1."
   },
   {
     "numero": 6,
     "codigo": "6g",
-    "resumo": "Complexo disco-osteofitário foraminal E",
+    "resumo": "Complexo disco-osteofitário foraminal esquerdo",
     "tipo": "substituicao",
-    "frase": "Complexo disco-osteofitário foraminal esquerdo em XXX tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
-    "conclusao": "Complexo disco-osteofitário foraminal esquerdo em XXX com redução do calibre foraminal."
+    "frase": "Nível T12-L1: complexo disco-osteofitário foraminal esquerdo tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
+    "conclusao": "Complexo disco-osteofitário foraminal esquerdo Nivel T12-L1."
   },
   {
     "numero": 6,
     "codigo": "6h",
     "resumo": "Hérnia discal extrusa",
     "tipo": "substituicao",
-    "frase": "Hérnia discal extrusa posterior/subarticular em XXX exercendo compressão na face ventral do saco dural com migração inferior/superior. O material herniado mede cerca de XXX e determina XXX.",
-    "conclusao": "Hérnia discal extrusa em XXX."
+    "frase": "Nível T12-L1: hérnia discal extrusa posterior/subarticular exercendo compressão na face ventral do saco dural com migração inferior. O material herniado mede cerca de XXX e determina XXX.",
+    "conclusao": "Hérnia discal extrusa em T12-L1."
   },
   {
     "numero": 6,
     "codigo": "6i",
     "resumo": "Fissura discal",
     "tipo": "complementar",
-    "frase": "Traço de alto sinal no ânulo fibroso do disco intervertebral de XXX compatível com fissura discal.",
+    "frase": "Nível T12-L1: traço de alto sinal no ânulo fibroso do disco intervertebral compatível com fissura discal.",
     "conclusao": ""
   },
   {
     "numero": 7,
     "codigo": "7a",
-    "resumo": "Abaulamento discal difuso",
+    "resumo": "Abaulamento discal",
     "tipo": "substituicao",
-    "frase": "Abaulamento discal difuso em XXX tocando a face ventral do saco dural e se estendendo aos forames intervertebrais.",
-    "conclusao": "Abaulamento discal difuso em XXX."
+    "frase": "Nível L1-L2: abaulamento discal difuso tocando a face ventral do saco dural e se estendendo aos forames intervertebrais determinando redução da sua amplitude.",
+    "conclusao": "Abaulamento discal difuso em L1-L2."
   },
   {
     "numero": 7,
     "codigo": "7b",
-    "resumo": "Protrusão discal central",
+    "resumo": "Protrusão discal",
     "tipo": "substituicao",
-    "frase": "Protrusão discal central posterior em XXX tocando a face ventral do saco dural.",
-    "conclusao": "Protrusão discal posterior em XXX."
+    "frase": "Nível L1-L2: protrusão discal central posterior tocando a face ventral do saco dural determinando leve impressão sobre o saco dural.",
+    "conclusao": "Protrusão discal posterior em L1-L2."
   },
   {
     "numero": 7,
     "codigo": "7c",
     "resumo": "Protrusão central acentuada",
     "tipo": "substituicao",
-    "frase": "Protrusão discal central posterior em XXX exercendo compressão da face ventral do saco dural e determinando redução da amplitude do canal vertebral.",
-    "conclusao": "Protrusão discal posterior em XXX com redução do canal vertebral."
+    "frase": "Nível L1-L2: protrusão discal central posterior exercendo compressão da face ventral do saco dural e determinando redução da amplitude do canal vertebral.",
+    "conclusao": "Protrusão discal posterior em L1-L2 determinando estenose do canal vertebral."
   },
   {
     "numero": 7,
     "codigo": "7d",
     "resumo": "Hérnia/protrusão foraminal direita",
     "tipo": "substituicao",
-    "frase": "Protrusão discal foraminal direita em XXX determinando estreitamento do forame neural neste nível.",
-    "conclusao": "Protrusão discal foraminal direita em XXX com estreitamento foraminal."
+    "frase": "Nível L1-L2: protrusão discal foraminal direita determinando estreitamento do forame neural neste nível.",
+    "conclusao": "Protrusão discal foraminal direita em L1-L2 com estreitamento foraminal."
   },
   {
     "numero": 7,
     "codigo": "7e",
     "resumo": "Hérnia/protrusão foraminal esquerda",
     "tipo": "substituicao",
-    "frase": "Protrusão discal foraminal esquerda em XXX determinando estreitamento do forame neural neste nível.",
-    "conclusao": "Protrusão discal foraminal esquerda em XXX com estreitamento foraminal."
+    "frase": "Nível L1-L2: protrusão discal foraminal esquerda determinando estreitamento do forame neural neste nível.",
+    "conclusao": "Protrusão discal foraminal esquerda em L1-L2 com estreitamento foraminal."
   },
   {
     "numero": 7,
     "codigo": "7f",
-    "resumo": "Complexo disco-osteofitário foraminal D",
+    "resumo": "Complexo disco-osteofitário foraminal direito",
     "tipo": "substituicao",
-    "frase": "Complexo disco-osteofitário foraminal direito em XXX tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
-    "conclusao": "Complexo disco-osteofitário foraminal direito em XXX com redução do calibre foraminal."
+    "frase": "Nível L1-L2: complexo disco-osteofitário foraminal direito tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
+    "conclusao": "Complexo disco-osteofitário foraminal direito em L1-L2."
   },
   {
     "numero": 7,
     "codigo": "7g",
-    "resumo": "Complexo disco-osteofitário foraminal E",
+    "resumo": "Complexo disco-osteofitário foraminal esquerdo",
     "tipo": "substituicao",
-    "frase": "Complexo disco-osteofitário foraminal esquerdo em XXX tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
-    "conclusao": "Complexo disco-osteofitário foraminal esquerdo em XXX com redução do calibre foraminal."
+    "frase": "Nível L1-L2: complexo disco-osteofitário foraminal esquerdo tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
+    "conclusao": "Complexo disco-osteofitário foraminal esquerdo em L1-L2."
   },
   {
     "numero": 7,
     "codigo": "7h",
     "resumo": "Hérnia discal extrusa",
     "tipo": "substituicao",
-    "frase": "Hérnia discal extrusa posterior/subarticular em XXX exercendo compressão na face ventral do saco dural com migração inferior/superior. O material herniado mede cerca de XXX e determina XXX.",
-    "conclusao": "Hérnia discal extrusa em XXX."
+    "frase": "Nível L1-L2: hérnia discal extrusa posterior/subarticular exercendo compressão na face ventral do saco dural com migração inferior. O material herniado mede cerca de XXX e determina XXX.",
+    "conclusao": "Hérnia discal extrusa em L1-L2."
   },
   {
     "numero": 7,
     "codigo": "7i",
     "resumo": "Fissura discal",
     "tipo": "complementar",
-    "frase": "Traço de alto sinal no ânulo fibroso do disco intervertebral de XXX compatível com fissura discal.",
+    "frase": "Nível L1-L2: traço de alto sinal no ânulo fibroso do disco intervertebral compatível com fissura discal.",
     "conclusao": ""
   },
   {
     "numero": 8,
     "codigo": "8a",
-    "resumo": "Abaulamento discal difuso",
+    "resumo": "Abaulamento discal",
     "tipo": "substituicao",
-    "frase": "Abaulamento discal difuso em XXX tocando a face ventral do saco dural e se estendendo aos forames intervertebrais.",
-    "conclusao": "Abaulamento discal difuso em XXX."
+    "frase": "Nível L2-L3: abaulamento discal difuso tocando a face ventral do saco dural e se estendendo aos forames intervertebrais determinando redução da sua amplitude.",
+    "conclusao": "Abaulamento discal difuso em L2-L3."
   },
   {
     "numero": 8,
     "codigo": "8b",
-    "resumo": "Protrusão discal central",
+    "resumo": "Protrusão discal",
     "tipo": "substituicao",
-    "frase": "Protrusão discal central posterior em XXX tocando a face ventral do saco dural.",
-    "conclusao": "Protrusão discal posterior em XXX."
+    "frase": "Nível L2-L3: protrusão discal central posterior tocando a face ventral do saco dural determinando leve impressão sobre o saco dural.",
+    "conclusao": "Protrusão discal posterior em L2-L3."
   },
   {
     "numero": 8,
     "codigo": "8c",
     "resumo": "Protrusão central acentuada",
     "tipo": "substituicao",
-    "frase": "Protrusão discal central posterior em XXX exercendo compressão da face ventral do saco dural e determinando redução da amplitude do canal vertebral.",
-    "conclusao": "Protrusão discal posterior em XXX com redução do canal vertebral."
+    "frase": "Nível L2-L3: protrusão discal central posterior exercendo compressão da face ventral do saco dural e determinando redução da amplitude do canal vertebral.",
+    "conclusao": "Protrusão discal posterior em L2-L3 determinando estenose do canal vertebral."
   },
   {
     "numero": 8,
     "codigo": "8d",
     "resumo": "Hérnia/protrusão foraminal direita",
     "tipo": "substituicao",
-    "frase": "Protrusão discal foraminal direita em XXX determinando estreitamento do forame neural neste nível.",
-    "conclusao": "Protrusão discal foraminal direita em XXX com estreitamento foraminal."
+    "frase": "Nível L2-L3: protrusão discal foraminal direita determinando estreitamento do forame neural neste nível.",
+    "conclusao": "Protrusão discal foraminal direita em L2-L3 com estreitamento foraminal."
   },
   {
     "numero": 8,
     "codigo": "8e",
     "resumo": "Hérnia/protrusão foraminal esquerda",
     "tipo": "substituicao",
-    "frase": "Protrusão discal foraminal esquerda em XXX determinando estreitamento do forame neural neste nível.",
-    "conclusao": "Protrusão discal foraminal esquerda em XXX com estreitamento foraminal."
+    "frase": "Nível L2-L3: protrusão discal foraminal esquerda determinando estreitamento do forame neural neste nível.",
+    "conclusao": "Protrusão discal foraminal esquerda em L2-L3 com estreitamento foraminal."
   },
   {
     "numero": 8,
     "codigo": "8f",
-    "resumo": "Complexo disco-osteofitário foraminal D",
+    "resumo": "Complexo disco-osteofitário foraminal direito",
     "tipo": "substituicao",
-    "frase": "Complexo disco-osteofitário foraminal direito em XXX tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
-    "conclusao": "Complexo disco-osteofitário foraminal direito em XXX com redução do calibre foraminal."
+    "frase": "Nível L2-L3: complexo disco-osteofitário foraminal direito tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
+    "conclusao": "Complexo disco-osteofitário foraminal direito em L2-L3."
   },
   {
     "numero": 8,
     "codigo": "8g",
-    "resumo": "Complexo disco-osteofitário foraminal E",
+    "resumo": "Complexo disco-osteofitário foraminal esquerdo",
     "tipo": "substituicao",
-    "frase": "Complexo disco-osteofitário foraminal esquerdo em XXX tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
-    "conclusao": "Complexo disco-osteofitário foraminal esquerdo em XXX com redução do calibre foraminal."
+    "frase": "Nível L2-L3: complexo disco-osteofitário foraminal esquerdo tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
+    "conclusao": "Complexo disco-osteofitário foraminal esquerdo em L2-L3."
   },
   {
     "numero": 8,
     "codigo": "8h",
     "resumo": "Hérnia discal extrusa",
     "tipo": "substituicao",
-    "frase": "Hérnia discal extrusa posterior/subarticular em XXX exercendo compressão na face ventral do saco dural com migração inferior/superior. O material herniado mede cerca de XXX e determina XXX.",
-    "conclusao": "Hérnia discal extrusa em XXX."
+    "frase": "Nível L2-L3: hérnia discal extrusa posterior/subarticular exercendo compressão na face ventral do saco dural com migração inferior. O material herniado mede cerca de XXX e determina XXX.",
+    "conclusao": "Hérnia discal extrusa em L2-L3."
   },
   {
     "numero": 8,
     "codigo": "8i",
     "resumo": "Fissura discal",
     "tipo": "complementar",
-    "frase": "Traço de alto sinal no ânulo fibroso do disco intervertebral de XXX compatível com fissura discal.",
+    "frase": "Nível L2-L3: traço de alto sinal no ânulo fibroso do disco intervertebral compatível com fissura discal.",
     "conclusao": ""
   },
   {
     "numero": 9,
     "codigo": "9a",
-    "resumo": "Abaulamento discal difuso",
+    "resumo": "Abaulamento discal",
     "tipo": "substituicao",
-    "frase": "Abaulamento discal difuso em XXX tocando a face ventral do saco dural e se estendendo aos forames intervertebrais.",
-    "conclusao": "Abaulamento discal difuso em XXX."
+    "frase": "Nível L3-L4: abaulamento discal difuso tocando a face ventral do saco dural e se estendendo aos forames intervertebrais determinando redução da sua amplitude.",
+    "conclusao": "Abaulamento discal difuso em L3-L4."
   },
   {
     "numero": 9,
     "codigo": "9b",
-    "resumo": "Protrusão discal central",
+    "resumo": "Protrusão discal",
     "tipo": "substituicao",
-    "frase": "Protrusão discal central posterior em XXX tocando a face ventral do saco dural.",
-    "conclusao": "Protrusão discal posterior em XXX."
+    "frase": "Nível L3-L4: protrusão discal central posterior tocando a face ventral do saco dural determinando leve impressão sobre o saco dural.",
+    "conclusao": "Protrusão discal posterior em L3-L4."
   },
   {
     "numero": 9,
     "codigo": "9c",
     "resumo": "Protrusão central acentuada",
     "tipo": "substituicao",
-    "frase": "Protrusão discal central posterior em XXX exercendo compressão da face ventral do saco dural e determinando redução da amplitude do canal vertebral.",
-    "conclusao": "Protrusão discal posterior em XXX com redução do canal vertebral."
+    "frase": "Nível L3-L4: protrusão discal central posterior exercendo compressão da face ventral do saco dural e determinando redução da amplitude do canal vertebral.",
+    "conclusao": "Protrusão discal posterior em L3-L4 determinando estenose do canal vertebral."
   },
   {
     "numero": 9,
     "codigo": "9d",
     "resumo": "Hérnia/protrusão foraminal direita",
     "tipo": "substituicao",
-    "frase": "Protrusão discal foraminal direita em XXX determinando estreitamento do forame neural neste nível.",
-    "conclusao": "Protrusão discal foraminal direita em XXX com estreitamento foraminal."
+    "frase": "Nível L3-L4: protrusão discal foraminal direita determinando estreitamento do forame neural neste nível.",
+    "conclusao": "Protrusão discal foraminal direita em L3-L4 com estreitamento foraminal."
   },
   {
     "numero": 9,
     "codigo": "9e",
     "resumo": "Hérnia/protrusão foraminal esquerda",
     "tipo": "substituicao",
-    "frase": "Protrusão discal foraminal esquerda em XXX determinando estreitamento do forame neural neste nível.",
-    "conclusao": "Protrusão discal foraminal esquerda em XXX com estreitamento foraminal."
+    "frase": "Nível L3-L4: protrusão discal foraminal esquerda determinando estreitamento do forame neural neste nível.",
+    "conclusao": "Protrusão discal foraminal esquerda em L3-L4 com estreitamento foraminal."
   },
   {
     "numero": 9,
     "codigo": "9f",
-    "resumo": "Complexo disco-osteofitário foraminal D",
+    "resumo": "Complexo disco-osteofitário foraminal direito",
     "tipo": "substituicao",
-    "frase": "Complexo disco-osteofitário foraminal direito em XXX tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
-    "conclusao": "Complexo disco-osteofitário foraminal direito em XXX com redução do calibre foraminal."
+    "frase": "Nível L3-L4: complexo disco-osteofitário foraminal direito tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
+    "conclusao": "Complexo disco-osteofitário foraminal direito em L3-L4."
   },
   {
     "numero": 9,
     "codigo": "9g",
-    "resumo": "Complexo disco-osteofitário foraminal E",
+    "resumo": "Complexo disco-osteofitário foraminal esquerdo",
     "tipo": "substituicao",
-    "frase": "Complexo disco-osteofitário foraminal esquerdo em XXX tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
-    "conclusao": "Complexo disco-osteofitário foraminal esquerdo em XXX com redução do calibre foraminal."
+    "frase": "Nível L3-L4: complexo disco-osteofitário foraminal esquerdo tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
+    "conclusao": "Complexo disco-osteofitário foraminal esquerdo em L3-L4."
   },
   {
     "numero": 9,
     "codigo": "9h",
     "resumo": "Hérnia discal extrusa",
     "tipo": "substituicao",
-    "frase": "Hérnia discal extrusa posterior/subarticular em XXX exercendo compressão na face ventral do saco dural com migração inferior/superior. O material herniado mede cerca de XXX e determina XXX.",
-    "conclusao": "Hérnia discal extrusa em XXX."
+    "frase": "Nível L3-L4: hérnia discal extrusa posterior/subarticular exercendo compressão na face ventral do saco dural com migração inferior. O material herniado mede cerca de XXX e determina XXX.",
+    "conclusao": "Hérnia discal extrusa em L3-L4."
   },
   {
     "numero": 9,
     "codigo": "9i",
     "resumo": "Fissura discal",
     "tipo": "complementar",
-    "frase": "Traço de alto sinal no ânulo fibroso do disco intervertebral de XXX compatível com fissura discal.",
+    "frase": "Nível L3-L4: traço de alto sinal no ânulo fibroso do disco intervertebral compatível com fissura discal.",
     "conclusao": ""
   },
   {
     "numero": 10,
     "codigo": "10a",
-    "resumo": "Abaulamento discal difuso",
+    "resumo": "Abaulamento discal",
     "tipo": "substituicao",
-    "frase": "Abaulamento discal difuso em XXX tocando a face ventral do saco dural e se estendendo aos forames intervertebrais.",
-    "conclusao": "Abaulamento discal difuso em XXX."
+    "frase": "Nível L4-L5: abaulamento discal difuso tocando a face ventral do saco dural e se estendendo aos forames intervertebrais determinando redução da sua amplitude.",
+    "conclusao": "Abaulamento discal difuso em L4-L5."
   },
   {
     "numero": 10,
     "codigo": "10b",
-    "resumo": "Protrusão discal central",
+    "resumo": "Protrusão discal",
     "tipo": "substituicao",
-    "frase": "Protrusão discal central posterior em XXX tocando a face ventral do saco dural.",
-    "conclusao": "Protrusão discal posterior em XXX."
+    "frase": "Nível L4-L5: protrusão discal central posterior tocando a face ventral do saco dural determinando leve impressão sobre o saco dural.",
+    "conclusao": "Protrusão discal posterior em L4-L5."
   },
   {
     "numero": 10,
     "codigo": "10c",
     "resumo": "Protrusão central acentuada",
     "tipo": "substituicao",
-    "frase": "Protrusão discal central posterior em XXX exercendo compressão da face ventral do saco dural e determinando redução da amplitude do canal vertebral.",
-    "conclusao": "Protrusão discal posterior em XXX com redução do canal vertebral."
+    "frase": "Nível L4-L5: protrusão discal central posterior exercendo compressão da face ventral do saco dural e determinando redução da amplitude do canal vertebral.",
+    "conclusao": "Protrusão discal posterior em L4-L5 determinando estenose do canal vertebral."
   },
   {
     "numero": 10,
     "codigo": "10d",
     "resumo": "Hérnia/protrusão foraminal direita",
     "tipo": "substituicao",
-    "frase": "Protrusão discal foraminal direita em XXX determinando estreitamento do forame neural neste nível.",
-    "conclusao": "Protrusão discal foraminal direita em XXX com estreitamento foraminal."
+    "frase": "Nível L4-L5: protrusão discal foraminal direita determinando estreitamento do forame neural neste nível.",
+    "conclusao": "Protrusão discal foraminal direita em L4-L5 com estreitamento foraminal."
   },
   {
     "numero": 10,
     "codigo": "10e",
     "resumo": "Hérnia/protrusão foraminal esquerda",
     "tipo": "substituicao",
-    "frase": "Protrusão discal foraminal esquerda em XXX determinando estreitamento do forame neural neste nível.",
-    "conclusao": "Protrusão discal foraminal esquerda em XXX com estreitamento foraminal."
+    "frase": "Nível L4-L5: protrusão discal foraminal esquerda determinando estreitamento do forame neural neste nível.",
+    "conclusao": "Protrusão discal foraminal esquerda em L4-L5 com estreitamento foraminal."
   },
   {
     "numero": 10,
     "codigo": "10f",
-    "resumo": "Complexo disco-osteofitário foraminal D",
+    "resumo": "Complexo disco-osteofitário foraminal direito",
     "tipo": "substituicao",
-    "frase": "Complexo disco-osteofitário foraminal direito em XXX tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
-    "conclusao": "Complexo disco-osteofitário foraminal direito em XXX com redução do calibre foraminal."
+    "frase": "Nível L4-L5: complexo disco-osteofitário foraminal direito tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
+    "conclusao": "Complexo disco-osteofitário foraminal direito em L4-L5."
   },
   {
     "numero": 10,
     "codigo": "10g",
-    "resumo": "Complexo disco-osteofitário foraminal E",
+    "resumo": "Complexo disco-osteofitário foraminal esquerdo",
     "tipo": "substituicao",
-    "frase": "Complexo disco-osteofitário foraminal esquerdo em XXX tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
-    "conclusao": "Complexo disco-osteofitário foraminal esquerdo em XXX com redução do calibre foraminal."
+    "frase": "Nível L4-L5: complexo disco-osteofitário foraminal esquerdo tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
+    "conclusao": "Complexo disco-osteofitário foraminal esquerdo em L4-L5."
   },
   {
     "numero": 10,
     "codigo": "10h",
     "resumo": "Hérnia discal extrusa",
     "tipo": "substituicao",
-    "frase": "Hérnia discal extrusa posterior/subarticular em XXX exercendo compressão na face ventral do saco dural com migração inferior/superior. O material herniado mede cerca de XXX e determina XXX.",
-    "conclusao": "Hérnia discal extrusa em XXX."
+    "frase": "Nível L4-L5: hérnia discal extrusa posterior/subarticular exercendo compressão na face ventral do saco dural com migração inferior. O material herniado mede cerca de XXX e determina XXX.",
+    "conclusao": "Hérnia discal extrusa em L4-L5."
   },
   {
     "numero": 10,
     "codigo": "10i",
     "resumo": "Fissura discal",
     "tipo": "complementar",
-    "frase": "Traço de alto sinal no ânulo fibroso do disco intervertebral de XXX compatível com fissura discal.",
+    "frase": "Nível L4-L5: traço de alto sinal no ânulo fibroso do disco intervertebral compatível com fissura discal.",
     "conclusao": ""
   },
   {
     "numero": 11,
     "codigo": "11a",
-    "resumo": "Abaulamento discal difuso",
+    "resumo": "Abaulamento discal",
     "tipo": "substituicao",
-    "frase": "Abaulamento discal difuso em XXX tocando a face ventral do saco dural e se estendendo aos forames intervertebrais.",
-    "conclusao": "Abaulamento discal difuso em XXX."
+    "frase": "Nível L5-S1: abaulamento discal difuso tocando a face ventral do saco dural e se estendendo aos forames intervertebrais determinando redução da sua amplitude.",
+    "conclusao": "Abaulamento discal difuso em L5-S1."
   },
   {
     "numero": 11,
     "codigo": "11b",
-    "resumo": "Protrusão discal central",
+    "resumo": "Protrusão discal",
     "tipo": "substituicao",
-    "frase": "Protrusão discal central posterior em XXX tocando a face ventral do saco dural.",
-    "conclusao": "Protrusão discal posterior em XXX."
+    "frase": "Nível L5-S1: protrusão discal central posterior tocando a face ventral do saco dural determinando leve impressão sobre o saco dural.",
+    "conclusao": "Protrusão discal posterior em L5-S1."
   },
   {
     "numero": 11,
     "codigo": "11c",
     "resumo": "Protrusão central acentuada",
     "tipo": "substituicao",
-    "frase": "Protrusão discal central posterior em XXX exercendo compressão da face ventral do saco dural e determinando redução da amplitude do canal vertebral.",
-    "conclusao": "Protrusão discal posterior em XXX com redução do canal vertebral."
+    "frase": "Nível L5-S1: protrusão discal central posterior exercendo compressão da face ventral do saco dural e determinando redução da amplitude do canal vertebral.",
+    "conclusao": "Protrusão discal posterior em L5-S1 determinando estenose do canal vertebral."
   },
   {
     "numero": 11,
     "codigo": "11d",
     "resumo": "Hérnia/protrusão foraminal direita",
     "tipo": "substituicao",
-    "frase": "Protrusão discal foraminal direita em XXX determinando estreitamento do forame neural neste nível.",
-    "conclusao": "Protrusão discal foraminal direita em XXX com estreitamento foraminal."
+    "frase": "Nível L5-S1: protrusão discal foraminal direita determinando estreitamento do forame neural neste nível.",
+    "conclusao": "Protrusão discal foraminal direita em L5-S1 com estreitamento foraminal."
   },
   {
     "numero": 11,
     "codigo": "11e",
     "resumo": "Hérnia/protrusão foraminal esquerda",
     "tipo": "substituicao",
-    "frase": "Protrusão discal foraminal esquerda em XXX determinando estreitamento do forame neural neste nível.",
-    "conclusao": "Protrusão discal foraminal esquerda em XXX com estreitamento foraminal."
+    "frase": "Nível L5-S1: protrusão discal foraminal esquerda determinando estreitamento do forame neural neste nível.",
+    "conclusao": "Protrusão discal foraminal esquerda em L5-S1 com estreitamento foraminal."
   },
   {
     "numero": 11,
     "codigo": "11f",
-    "resumo": "Complexo disco-osteofitário foraminal D",
+    "resumo": "Complexo disco-osteofitário foraminal direito",
     "tipo": "substituicao",
-    "frase": "Complexo disco-osteofitário foraminal direito em XXX tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
-    "conclusao": "Complexo disco-osteofitário foraminal direito em XXX com redução do calibre foraminal."
+    "frase": "Nível L5-S1: complexo disco-osteofitário foraminal direito tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
+    "conclusao": "Complexo disco-osteofitário foraminal direito em L5-S1."
   },
   {
     "numero": 11,
     "codigo": "11g",
-    "resumo": "Complexo disco-osteofitário foraminal E",
+    "resumo": "Complexo disco-osteofitário foraminal esquerdo",
     "tipo": "substituicao",
-    "frase": "Complexo disco-osteofitário foraminal esquerdo em XXX tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
-    "conclusao": "Complexo disco-osteofitário foraminal esquerdo em XXX com redução do calibre foraminal."
+    "frase": "Nível L5-S1: complexo disco-osteofitário foraminal esquerdo tocando a face ventral do saco dural e se estendendo ao forame intervertebral, determinando redução da sua amplitude.",
+    "conclusao": "Complexo disco-osteofitário foraminal esquerdo em L5-S1."
   },
   {
     "numero": 11,
     "codigo": "11h",
     "resumo": "Hérnia discal extrusa",
     "tipo": "substituicao",
-    "frase": "Hérnia discal extrusa posterior/subarticular em XXX exercendo compressão na face ventral do saco dural com migração inferior/superior. O material herniado mede cerca de XXX e determina XXX.",
-    "conclusao": "Hérnia discal extrusa em XXX."
+    "frase": "Nível L5-S1: hérnia discal extrusa posterior/subarticular exercendo compressão na face ventral do saco dural com migração inferior. O material herniado mede cerca de XXX e determina XXX.",
+    "conclusao": "Hérnia discal extrusa em L5-S1."
   },
   {
     "numero": 11,
     "codigo": "11i",
     "resumo": "Fissura discal",
     "tipo": "complementar",
-    "frase": "Traço de alto sinal no ânulo fibroso do disco intervertebral de XXX compatível com fissura discal.",
+    "frase": "Nível L5-S1: traço de alto sinal no ânulo fibroso do disco intervertebral compatível com fissura discal.",
     "conclusao": ""
   },
   {
