@@ -4,7 +4,7 @@
     "codigo": "1a",
     "resumo": "Escoliose lombar E",
     "tipo": "complementar",
-    "frase": "\nDesvio da coluna lombar com convexidade para a esquerda.",
+    "frase": "\n- Desvio da coluna lombar com convexidade para a esquerda.",
     "conclusao": "Escoliose lombar com convexidade à esquerda."
   },
   {
@@ -12,7 +12,7 @@
     "codigo": "1b",
     "resumo": "Escoliose lombar D",
     "tipo": "complementar",
-    "frase": "<br>Desvio da coluna lombar com convexidade para a direita.",
+    "frase": "\n- Desvio da coluna lombar com convexidade para a direita.",
     "conclusao": "Escoliose lombar com convexidade à direita."
   },
   {
@@ -44,7 +44,7 @@
     "codigo": "1f",
     "resumo": "Discopatia degenerativa XXX",
     "tipo": "complementar",
-    "frase": "Discopatia degenerativa em XXX caracterizada por hipossinal do núcleo pulposo nas sequências ponderadas em T2, com redução do espaço discal e osteofitose marginal, notando-se alteração de sinal com padrão de edema/lipossubstituição nos platôs dos corpos vertebrais justapostos.",
+    "frase": "\n- Discopatia degenerativa em XXX caracterizada por hipossinal do núcleo pulposo nas sequências ponderadas em T2, com redução do espaço discal e osteofitose marginal, notando-se alteração de sinal com padrão de edema/lipossubstituição nos platôs dos corpos vertebrais justapostos.",
     "conclusao": "Discopatia degenerativa em XXX."
   },
   {
@@ -52,7 +52,7 @@
     "codigo": "1g",
     "resumo": "Espondiloartrite / Modic I-II",
     "tipo": "substituicao",
-    "frase": "Sinais de espondiloartrose caracterizada por osteófitos marginais nos corpos vertebrais com alteração de sinal com padrão de edema e alguns focos já com substituição gordurosa (Modic I e II) vistos nos cantos anteriores dos corpos vertebrais lombares. Esses achados podem estar relacionados a espondiloartropatias soronegativas.",
+    "frase": "\n- Sinais de espondiloartrose caracterizada por osteófitos marginais nos corpos vertebrais com alteração de sinal com padrão de edema e alguns focos já com substituição gordurosa (Modic I e II) vistos nos cantos anteriores dos corpos vertebrais lombares. Esses achados podem estar relacionados a espondiloartropatias soronegativas.",
     "conclusao": "Alterações degenerativas com sinais de espondiloartrite (Modic I e II) nos cantos anteriores dos corpos vertebrais lombares."
   },
   {
@@ -60,7 +60,7 @@
     "codigo": "1h",
     "resumo": "Anterolistese",
     "tipo": "complementar",
-    "frase": "Anterolistese do corpo vertebral de XXX sobre XXX, com deslocamento menor ou maior do que 25% do diâmetro ântero-posterior do corpo vertebral.",
+    "frase": "\n- Anterolistese do corpo vertebral de XXX sobre XXX, com deslocamento menor ou maior do que 25% do diâmetro ântero-posterior do corpo vertebral.",
     "conclusao": "Anterolistese de XXX sobre XXX."
   },
   {
@@ -76,7 +76,7 @@
     "codigo": "1j",
     "resumo": "Hemangioma vertebral",
     "tipo": "complementar",
-    "frase": "Foco de alteração de sinal no corpo vertebral de XXX, com características compatíveis com hemangioma ou depósito focal de gordura.",
+    "frase": "\n- Foco de alteração de sinal no corpo vertebral de XXX, com características compatíveis com hemangioma ou depósito focal de gordura.",
     "conclusao": "Hemangioma ou depósito focal de gordura no corpo vertebral de XXX."
   },
   {
@@ -84,7 +84,7 @@
     "codigo": "1k",
     "resumo": "Hemangiomas múltiplos",
     "tipo": "complementar",
-    "frase": "Focos de alteração de sinal nos corpos vertebrais de XXX e de XXX, com características compatíveis com hemangiomas ou depósitos focais de gordura.",
+    "frase": "\n- Focos de alteração de sinal nos corpos vertebrais de XXX e de XXX, com características compatíveis com hemangiomas ou depósitos focais de gordura.",
     "conclusao": "Hemangiomas ou depósitos focais de gordura nos corpos vertebrais de XXX e XXX."
   },
   {
@@ -92,7 +92,7 @@
     "codigo": "1l",
     "resumo": "Nódulos de Schmorl",
     "tipo": "complementar",
-    "frase": "Presença de nódulos de Schmorl no corpo vertebral de XXX.",
+    "frase": "\n- Presença de nódulos de Schmorl no corpo vertebral de XXX.",
     "conclusao": ""
   },
   {
@@ -100,7 +100,7 @@
     "codigo": "1m",
     "resumo": "L5 com megapófises transversas",
     "tipo": "complementar",
-    "frase": "A vértebra L5 apresenta megapófises transversas articulando-se com o sacro.",
+    "frase": "\n- A vértebra L5 apresenta megapófises transversas articulando-se com o sacro.",
     "conclusao": ""
   },
   {
@@ -108,7 +108,7 @@
     "codigo": "1n",
     "resumo": "Vértebra de transição (VT)",
     "tipo": "complementar",
-    "frase": "Presença de vértebra de transição lombossacra denominada VT, com megapófises transversas articulando-se com o sacro.",
+    "frase": "\n- Presença de vértebra de transição lombossacra denominada VT, com megapófises transversas articulando-se com o sacro.",
     "conclusao": "Vértebra de transição lombossacra (VT)."
   },
   {
@@ -116,7 +116,7 @@
     "codigo": "1o",
     "resumo": "Variação de contagem vertebral",
     "tipo": "complementar",
-    "frase": "Realizada contagem dos corpos vertebrais baseada na presença de arcos costais que evidenciou 6 vértebras lombares, sendo a última denominada L6 VT.",
+    "frase": "\n- Realizada contagem dos corpos vertebrais baseada na presença de arcos costais que evidenciou 6 vértebras lombares, sendo a última denominada L6 VT.",
     "conclusao": ""
   },
   {
@@ -124,7 +124,7 @@
     "codigo": "1p",
     "resumo": "Sacroiliíte",
     "tipo": "complementar",
-    "frase": "Irregularidade das articulações sacroilíacas associada a alteração de sinal com padrão de edema compatível com sacroiliíte.",
+    "frase": "\n- Irregularidade das articulações sacroilíacas associada a alteração de sinal com padrão de edema compatível com sacroiliíte.",
     "conclusao": "Achados compatíveis com sacroiliíte."
   },
   {
@@ -148,7 +148,7 @@
     "codigo": "2c",
     "resumo": "Pós-operatório com instrumentação posterior",
     "tipo": "complementar",
-    "frase": "Sinais de abordagem cirúrgica via posterior, com parafusos metálicos transpediculares e hastes de fixação nos níveis de XXX, determinando artefatos de susceptibilidade magnética e limitação da avaliação local. Laminectomia e flavectomia em XXX, associadas a desorganização arquitetural da musculatura paravertebral e planos superficiais.",
+    "frase": "\n- Sinais de abordagem cirúrgica via posterior, com parafusos metálicos transpediculares e hastes de fixação nos níveis de XXX, determinando artefatos de susceptibilidade magnética e limitação da avaliação local. Laminectomia e flavectomia em XXX, associadas a desorganização arquitetural da musculatura paravertebral e planos superficiais.",
     "conclusao": "Sinais de tratamento cirúrgico com instrumentação posterior e laminectomia em XXX."
   },
   {
