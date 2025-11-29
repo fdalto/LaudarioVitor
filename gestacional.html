@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Gestacional</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="estilos_g.css">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="box-calculadora">
+        <h1><i class="fa fa-calculator"></i> Calculadora Gestacional</h1>
+
+        <div class="form-group">
+            <label for="criteriocalc">Como deseja calcular?</label>
+            <select id="criteriocalc" class="form-control">
+                <option disabled selected value=""> -- Selecione uma opção -- </option>
+                <option value="dum">Data da Última Menstruação (DUM)</option>
+                <option value="dpp">Data Provável do Parto (DPP)</option>
+                <option value="usg">Data de Ecografia Anterior</option>
+            </select>
+        </div>
+
+        <div id="section-dum" class="input-section">
+            <div class="form-group">
+                <label>Data da última menstruação:</label>
+                <input type="text" id="input-dum" class="form-control datepicker" placeholder="dd/mm/aaaa">
+            </div>
+        </div>
+
+        <div id="section-dpp" class="input-section">
+            <div class="form-group">
+                <label>Data provável do parto:</label>
+                <input type="text" id="input-dpp" class="form-control datepicker" placeholder="dd/mm/aaaa">
+            </div>
+        </div>
+
+        <div id="section-usg" class="input-section">
+            <div class="form-group">
+                <label>Data do exame (Ecografia):</label>
+                <input type="text" id="input-usg-data" class="form-control datepicker" placeholder="dd/mm/aaaa">
+            </div>
+            
+            <label>Idade Gestacional no dia do exame:</label>
+            <div class="row-flex">
+                <div class="col-flex">
+                    <input type="number" id="input-usg-semanas" class="form-control" placeholder="Semanas">
+                </div>
+                <div class="col-flex">
+                    <input type="number" id="input-usg-dias" class="form-control" placeholder="Dias" max="6">
+                </div>
+            </div>
+        </div>
+
+        <button type="button" id="btn-calcular">CALCULAR IDADE GESTACIONAL</button>
+
+        <div class="error-msg"></div>
+
+        <div id="result-container">
+            <div id="result-content"></div>
+        </div>
+        
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/pt-br.min.js"></script>
+
+<script src="calc_gestacional.js"></script>
+
+</body>
+</html>
