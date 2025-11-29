@@ -4,7 +4,7 @@
     "codigo": "1a",
     "resumo": "Escoliose lombar E",
     "tipo": "complementar",
-    "frase": "Desvio da coluna lombar com convexidade para a esquerda.",
+    "frase": "\nDesvio da coluna lombar com convexidade para a esquerda.",
     "conclusao": "Escoliose lombar com convexidade à esquerda."
   },
   {
@@ -12,7 +12,7 @@
     "codigo": "1b",
     "resumo": "Escoliose lombar D",
     "tipo": "complementar",
-    "frase": "Desvio da coluna lombar com convexidade para a direita.",
+    "frase": "<br>Desvio da coluna lombar com convexidade para a direita.",
     "conclusao": "Escoliose lombar com convexidade à direita."
   },
   {
